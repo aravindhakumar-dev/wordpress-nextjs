@@ -1,6 +1,6 @@
 const stats = [
   {
-    number: "150+",
+    number: "155+",
     label: "Projects Completed",
   },
   {
