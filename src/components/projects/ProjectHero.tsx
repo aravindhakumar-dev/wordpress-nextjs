@@ -125,7 +125,7 @@ export default function ProjectHero({
             alt={project.title}
             fill
             priority
-            className="object-cover transition duration-700"
+            className="object-cover object-top transition duration-700"
           />
 
         </div>

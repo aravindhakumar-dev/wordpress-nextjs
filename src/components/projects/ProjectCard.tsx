@@ -26,7 +26,7 @@ export default function ProjectCard({
           src={project.thumbnail}
           alt={project.title}
           fill
-          className="object-cover transition duration-700 group-hover:scale-105"
+          className="object-cover object-top transition duration-700 group-hover:scale-105"
         />
 
       </div>

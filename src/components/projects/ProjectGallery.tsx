@@ -46,9 +46,8 @@ export default function ProjectGallery({
             alt={featuredImage.alt}
             fill
             priority
-            className="object-cover transition duration-700 hover:scale-105"
+            className="object-cover object-top transition duration-700 hover:scale-105"
           />
-
         </div>
 
       </div>
@@ -72,7 +71,8 @@ export default function ProjectGallery({
                   src={image.src}
                   alt={image.alt}
                   fill
-                  className="object-cover transition duration-500 group-hover:scale-105"
+
+                  className="object-cover object-top transition duration-500 group-hover:scale-105"
                 />
 
               </div>
