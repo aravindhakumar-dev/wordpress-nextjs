@@ -1,40 +1,90 @@
+import type { Metadata } from "next";
 import { GoogleTagManager } from "@next/third-parties/google";
 import "./globals.css";
-import type { Metadata } from "next";
+
+const siteUrl = "https://aravindhakumar.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aravindhakumar.com"),
+  metadataBase: new URL(siteUrl),
 
-  title: "Aravindhakumar G | Full-Stack Web Developer",
+  title: {
+    default: "Aravindhakumar G | WordPress, Shopify & Next.js Developer",
+    template: "%s | Aravindhakumar G",
+  },
 
   description:
-    "Full-Stack Web Developer specializing in WordPress, Shopify, Next.js and performance engineering.",
+    "Professional Full-Stack Web Developer specializing in WordPress, Shopify, WooCommerce, Next.js, React and Performance Optimization. Helping businesses build fast, scalable, SEO-friendly websites.",
 
-  verification: {
-    google:
-      "_ZwI5ZVyMSPxHJRU1d98xTZ-a8dQQDLhcxIUCIMzUBQ",
-  },
+  applicationName: "Aravindhakumar Portfolio",
+
+  authors: [
+    {
+      name: "Aravindhakumar G",
+      url: siteUrl,
+    },
+  ],
+
+  creator: "Aravindhakumar G",
+
+  publisher: "Aravindhakumar G",
+
+  category: "Technology",
 
   keywords: [
     "WordPress Developer",
+    "WooCommerce Developer",
     "Shopify Developer",
     "Next.js Developer",
-    "Full Stack Developer",
-    "Frontend Developer",
-    "WooCommerce Developer",
     "React Developer",
+    "Full Stack Developer",
+    "Performance Optimization",
+    "Headless WordPress",
+    "Technical SEO",
+    "Frontend Developer",
+    "Web Performance Engineer",
+    "Freelance WordPress Developer",
   ],
+
+  verification: {
+    google: "_ZwI5ZVyMSPxHJRU1d98xTZ-a8dQQDLhcxIUCIMzUBQ",
+  },
+
+  alternates: {
+    canonical: siteUrl,
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
 
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
   },
 
   openGraph: {
-    title: "Aravindhakumar G",
-    description:
-      "Full-Stack Web Developer Portfolio",
+    title: "Aravindhakumar G | Full-Stack Web Developer",
 
-    url: "https://aravindhakumar.com",
+    description:
+      "Professional portfolio showcasing WordPress, Shopify, Next.js and Performance Engineering projects.",
+
+    url: siteUrl,
 
     siteName: "Aravindhakumar Portfolio",
 
@@ -51,18 +101,36 @@ export const metadata: Metadata = {
       },
     ],
   },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Aravindhakumar G",
+
+    description:
+      "Professional Full-Stack Web Developer Portfolio",
+
+    images: ["/og-image.jpg"],
+  },
+
+  appleWebApp: {
+    capable: true,
+    title: "Aravindhakumar Portfolio",
+    statusBarStyle: "default",
+  },
+
+  referrer: "origin-when-cross-origin",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <body>
         {children}
-
         <GoogleTagManager gtmId="GTM-5M9Q7KGN" />
       </body>
     </html>
