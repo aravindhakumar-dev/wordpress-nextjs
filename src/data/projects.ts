@@ -580,3 +580,32 @@ export const projects: Project[] = [
   // Add remaining projects here
 ];
 
+/**
+ * Featured Projects
+ */
+export const featuredProjects = projects.filter(
+  (project) => project.featured
+);
+
+/**
+ * Find Project by Slug
+ */
+export function getProjectBySlug(slug: string) {
+  return projects.find(
+    (project) => project.slug === slug
+  );
+}
+
+/**
+ * Related Projects
+ */
+export function getRelatedProjects(
+  currentSlug: string,
+  limit = 3
+) {
+  return projects
+    .filter(
+      (project) => project.slug !== currentSlug
+    )
+    .slice(0, limit);
+}
