@@ -99,6 +99,8 @@ export default function Hero() {
             <Button
               href="/aravindhakumar-resume.pdf"
               variant="secondary"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Download Resume
             </Button>
