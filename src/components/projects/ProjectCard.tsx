@@ -81,35 +81,20 @@ export default function ProjectCard({
 
         <div className="mt-8 flex flex-wrap gap-3">
 
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <Button
+        href={project.liveUrl}
+      >
+        <Globe size={16} />
+        View Live Website
+      </Button>
 
-            <Button>
-
-              <Globe size={16} />
-
-              View Live Website
-
-            </Button>
-
-          </a>
-
-          <Link
-            href={`/projects/${project.slug}`}
-          >
-
-            <Button variant="secondary">
-
-              View Case Study
-
-              <ArrowUpRight size={16} />
-
-            </Button>
-
-          </Link>
+    <Button
+      href={`/projects/${project.slug}`}
+      variant="secondary"
+    >
+      View Case Study
+      <ArrowUpRight size={16} />
+    </Button>
 
         </div>
 
