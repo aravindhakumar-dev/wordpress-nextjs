@@ -15,6 +15,11 @@ type Props = {
 export default function ProjectCard({
   project,
 }: Props) {
+  const isExternalWebsite =
+    project.liveUrl &&
+    project.liveUrl.startsWith("http") &&
+    !project.liveUrl.includes("aravindhakumar.com");
+
   return (
     <article className="group overflow-hidden rounded-3xl border border-white/10 bg-white/5 transition-all duration-300 hover:border-cyan-400/40 hover:-translate-y-1">
 
@@ -81,20 +86,29 @@ export default function ProjectCard({
 
         <div className="mt-8 flex flex-wrap gap-3">
 
-      <Button
-        href={project.liveUrl}
-      >
-        <Globe size={16} />
-        View Live Website
-      </Button>
+          {isExternalWebsite ? (
+            <>
+              <Button href={project.liveUrl} target="_blank" rel="noopener noreferrer">
+                <Globe size={16} />
+                Live Website
+              </Button>
 
-    <Button
-      href={`/projects/${project.slug}`}
-      variant="secondary"
-    >
-      View Case Study
-      <ArrowUpRight size={16} />
-    </Button>
+              <Button
+                href={`/projects/${project.slug}`}
+                variant="secondary"
+              >
+                Case Study
+                <ArrowUpRight size={16} />
+              </Button>
+            </>
+          ) : (
+            <Button
+              href={`/projects/${project.slug}`}
+            >
+              Read Technical Case Study
+              <ArrowUpRight size={16} />
+            </Button>
+          )}
 
         </div>
 

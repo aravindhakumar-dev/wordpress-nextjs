@@ -25,12 +25,12 @@ export default function Hero() {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-300">
             <span className="h-2 w-2 rounded-full bg-cyan-400" />
 
-            Available for Remote Opportunities
+            WordPress &amp; Next.js Architecture • Independent Consultant
           </div>
 
           {/* Subtitle */}
           <p className="mb-4 text-sm uppercase tracking-[0.3em] text-cyan-400">
-            Full-Stack Web Developer
+            Senior Web Developer &amp; Technical Consultant
           </p>
 
           {/* Main Heading */}
@@ -40,14 +40,14 @@ export default function Hero() {
 
           {/* Tech Stack */}
           <h2 className="mt-6 text-2xl leading-relaxed text-gray-300 md:text-3xl">
-            WordPress • Shopify • Next.js • Performance Engineering
+            WordPress • Next.js • React • Performance &amp; Security Engineering
           </h2>
 
           {/* Description */}
           <p className="mt-8 max-w-2xl text-lg leading-8 text-gray-400">
-            Building scalable websites, eCommerce platforms,
-            and modern web experiences for businesses,
-            agencies, and growing brands worldwide.
+            Specializing in high-performance WordPress architectures, scalable
+            Next.js web applications, WooCommerce solutions, and enterprise security
+            hardening for businesses and agencies worldwide.
           </p>
 
           {/* Social Links */}
@@ -58,7 +58,7 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="flex items-center gap-2 transition hover:text-cyan-400"
             >
-          <FaLinkedin size={18} />
+              <FaLinkedin size={18} />
               LinkedIn
             </a>
 
@@ -73,12 +73,12 @@ export default function Hero() {
             </a>
 
             <a
-              href="https://share.google/tONq2WUENHtTK9pK1"
+              href="https://maps.app.goo.gl/gP5iaF4LRzRD37Gm9"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 transition hover:text-cyan-400"
             >
-             <FaMapMarkerAlt size={18} />
+              <FaMapMarkerAlt size={18} />
               Tamil Nadu, India
             </a>
           </div>
@@ -86,14 +86,21 @@ export default function Hero() {
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap gap-4">
             <Button href="#projects">
-              View Projects
+              View Featured Work
             </Button>
 
             <Button
               href="#contact"
               variant="secondary"
             >
-              Contact Me
+              Get in Touch
+            </Button>
+
+            <Button
+              href="/projects"
+              variant="secondary"
+            >
+              Case Studies
             </Button>
 
             <Button

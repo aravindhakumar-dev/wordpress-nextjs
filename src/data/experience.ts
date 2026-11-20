@@ -1,28 +1,28 @@
 export const experience = [
   {
     id: 1,
-    role: "Senior Web Developer",
-    company: "Freelance",
+    role: "Senior Web Developer & Technical Consultant",
+    company: "Independent Practice",
     duration: "2024 - Present",
     description:
-      "Developing scalable WordPress, Shopify and Next.js solutions for clients across multiple industries.",
+      "Architecting enterprise WordPress platforms, custom Next.js web applications, and WooCommerce storefronts with a focus on Core Web Vitals, security hardening, and performance engineering.",
   },
 
   {
     id: 2,
-    role: "Freelance Full Stack Developer",
-    company: "Self Employed",
+    role: "Full-Stack Web Developer",
+    company: "Digital Agency Solutions",
     duration: "2023 - 2024",
     description:
-      "Worked on WooCommerce, Shopify and performance optimization projects.",
+      "Engineered high-converting WooCommerce and headless WordPress solutions, custom theme development, and client web application integrations.",
   },
 
   {
     id: 3,
-    role: "UI/UX Developer",
+    role: "UI/UX & Frontend Developer",
     company: "Agency Experience",
     duration: "2021 - 2023",
     description:
-      "Designed and developed responsive interfaces with a focus on accessibility and user experience.",
+      "Built responsive, accessible user interfaces, optimized Core Web Vitals, and designed streamlined checkout and booking flows.",
   },
 ];

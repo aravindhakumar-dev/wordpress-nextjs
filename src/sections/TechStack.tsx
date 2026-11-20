@@ -1,22 +1,22 @@
 import SectionTitle from "@/components/common/SectionTitle";
 
-const technologies = [
-  "HTML5",
-  "CSS3",
-  "JavaScript",
-  "TypeScript",
-  "React.js",
-  "Next.js",
-  "Tailwind CSS",
-  "WordPress",
-  "WooCommerce",
-  "Shopify",
-  "PHP",
-  "MySQL",
-  "AWS",
-  "DigitalOcean",
-  "Netlify",
-  "GitHub",
+const techCategories = [
+  {
+    category: "CMS & eCommerce (Primary)",
+    items: ["WordPress", "WooCommerce", "Shopify", "PHP", "MySQL", "Headless CMS"],
+  },
+  {
+    category: "Modern Frontend (Primary)",
+    items: ["Next.js (App Router)", "React.js", "TypeScript", "Tailwind CSS", "JavaScript (ES6+)", "Framer Motion"],
+  },
+  {
+    category: "Performance & Security",
+    items: ["Core Web Vitals", "Technical SEO", "Cloudflare CDN", "Server Hardening", "DevTools Protocol (CDP)"],
+  },
+  {
+    category: "Backend & Infrastructure",
+    items: ["Django / Python (APIs)", "REST APIs", "Git & GitHub", "Vercel", "DigitalOcean", "Linux Web Servers"],
+  },
 ];
 
 export default function TechStack() {
@@ -25,16 +25,29 @@ export default function TechStack() {
       <div className="container-width">
         <SectionTitle
           label="Tech Stack"
-          title="Technologies & tools I work with."
+          title="Technologies, frameworks & engineering tools."
+          description="A specialized toolkit focused heavily on high-speed WordPress architectures and reactive Next.js applications."
         />
 
-        <div className="flex flex-wrap gap-4">
-          {technologies.map((tech) => (
+        <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {techCategories.map((group) => (
             <div
-              key={tech}
-              className="rounded-2xl border border-white/10 bg-white/5 px-5 py-3 text-sm text-gray-300"
+              key={group.category}
+              className="rounded-3xl border border-white/10 bg-white/5 p-8"
             >
-              {tech}
+              <h3 className="text-sm font-semibold uppercase tracking-widest text-cyan-400">
+                {group.category}
+              </h3>
+              <div className="mt-5 flex flex-wrap gap-2.5">
+                {group.items.map((tech) => (
+                  <span
+                    key={tech}
+                    className="rounded-xl border border-white/10 bg-white/5 px-4 py-2 text-sm text-gray-200 transition hover:border-cyan-400/40 hover:text-white"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
           ))}
         </div>

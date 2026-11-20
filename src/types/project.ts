@@ -5,6 +5,20 @@ import type {
   SeoMeta,
 } from "./common";
 
+export interface CodeSnippet {
+  language: string;
+  code: string;
+  caption?: string;
+}
+
+export interface ProjectSection {
+  title: string;
+  subtitle?: string;
+  content: string;
+  codeSnippet?: CodeSnippet;
+  listItems?: string[];
+}
+
 export interface Project {
   id: number;
 
@@ -43,4 +57,8 @@ export interface Project {
   results: string[];
 
   seo: SeoMeta;
+
+  sections?: ProjectSection[];
+
+  takeaways?: string[];
 }

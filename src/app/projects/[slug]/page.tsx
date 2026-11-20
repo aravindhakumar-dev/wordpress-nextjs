@@ -24,9 +24,9 @@ import {
 } from "@/data/projects";
 
 type Props = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 /**
@@ -44,8 +44,8 @@ export function generateStaticParams() {
 export async function generateMetadata({
   params,
 }: Props): Promise<Metadata> {
-
-  const project = getProjectBySlug(params.slug);
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     return {
@@ -82,11 +82,11 @@ export async function generateMetadata({
   };
 }
 
-export default function ProjectDetailsPage({
+export default async function ProjectDetailsPage({
   params,
 }: Props) {
-
-  const project = getProjectBySlug(params.slug);
+  const { slug } = await params;
+  const project = getProjectBySlug(slug);
 
   if (!project) {
     notFound();
@@ -427,6 +427,104 @@ export default function ProjectDetailsPage({
           </div>
 
         </section>
+
+        {/* Technical Deep Dive Sections (if available) */}
+        {project.sections && project.sections.length > 0 && (
+          <section className="mt-28">
+            <span className="text-sm uppercase tracking-[0.3em] text-cyan-400">
+              Technical Deep Dive
+            </span>
+            <h2 className="mt-3 text-3xl font-bold text-white md:text-4xl">
+              Forensic Analysis &amp; Code Walkthrough
+            </h2>
+            <p className="mt-4 max-w-3xl text-gray-400">
+              Detailed inspection of the engineering challenges, event lifecycles, and code implementations designed to resolve critical production issues.
+            </p>
+
+            <div className="mt-12 space-y-12">
+              {project.sections.map((sec, idx) => (
+                <article
+                  key={idx}
+                  className="rounded-3xl border border-white/10 bg-white/5 p-8 lg:p-10"
+                >
+                  {sec.subtitle && (
+                    <span className="text-xs uppercase tracking-widest text-cyan-400">
+                      {sec.subtitle}
+                    </span>
+                  )}
+                  <h3 className="mt-2 text-2xl font-bold text-white">
+                    {sec.title}
+                  </h3>
+                  <p className="mt-4 leading-8 text-gray-300 whitespace-pre-line">
+                    {sec.content}
+                  </p>
+
+                  {sec.codeSnippet && (
+                    <div className="mt-6 overflow-hidden rounded-2xl border border-white/10 bg-[#090D1A]">
+                      <div className="flex items-center justify-between border-b border-white/10 bg-black/40 px-4 py-2.5 text-xs text-gray-400">
+                        <div className="flex items-center gap-2">
+                          <span className="h-3 w-3 rounded-full bg-red-500/80" />
+                          <span className="h-3 w-3 rounded-full bg-yellow-500/80" />
+                          <span className="h-3 w-3 rounded-full bg-green-500/80" />
+                          <span className="ml-2 font-mono text-gray-400 font-semibold uppercase">
+                            {sec.codeSnippet.caption || sec.codeSnippet.language}
+                          </span>
+                        </div>
+                        <span className="rounded bg-white/10 px-2 py-0.5 font-mono text-[11px] text-cyan-300">
+                          {sec.codeSnippet.language}
+                        </span>
+                      </div>
+                      <pre className="overflow-x-auto p-5 font-mono text-sm leading-relaxed text-emerald-400">
+                        <code>{sec.codeSnippet.code}</code>
+                      </pre>
+                    </div>
+                  )}
+
+                  {sec.listItems && (
+                    <ul className="mt-6 space-y-3">
+                      {sec.listItems.map((item, i) => (
+                        <li key={i} className="flex items-start gap-3 text-gray-300">
+                          <span className="mt-2 h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                          <span>{item}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
+                </article>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {/* Architectural Takeaways (if available) */}
+        {project.takeaways && project.takeaways.length > 0 && (
+          <section className="mt-28">
+            <div className="rounded-3xl border border-emerald-500/30 bg-emerald-500/5 p-8 lg:p-12">
+              <span className="text-sm uppercase tracking-[0.3em] text-emerald-400">
+                Key Engineering Lessons
+              </span>
+              <h2 className="mt-3 text-3xl font-bold text-white">
+                Architectural Takeaways &amp; Best Practices
+              </h2>
+
+              <div className="mt-8 grid gap-6 md:grid-cols-2">
+                {project.takeaways.map((takeaway, idx) => (
+                  <div
+                    key={idx}
+                    className="flex gap-4 rounded-2xl border border-white/10 bg-black/40 p-6"
+                  >
+                    <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-emerald-400/20 font-bold text-emerald-300 text-sm">
+                      {idx + 1}
+                    </span>
+                    <p className="leading-7 text-gray-300">
+                      {takeaway}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
                 {/* Call To Action */}
 
         <section className="mt-24">

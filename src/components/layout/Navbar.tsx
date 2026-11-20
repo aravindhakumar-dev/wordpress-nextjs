@@ -6,23 +6,29 @@ import { Menu, X } from "lucide-react";
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "Projects", href: "#projects" },
-  { name: "Services", href: "#services" },
-  { name: "About", href: "#about" },
-  { name: "Contact", href: "#contact" },
+  { name: "Featured Work", href: "/#projects" },
+  { name: "Case Studies", href: "/projects" },
+  { name: "Services", href: "/#services" },
+  { name: "About", href: "/#about" },
+  { name: "Contact", href: "/#contact" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/30 backdrop-blur-lg">
+    <header className="fixed top-0 z-50 w-full border-b border-white/10 bg-black/40 backdrop-blur-xl">
       <div className="container-width flex h-20 items-center justify-between">
         <Link
           href="/"
-          className="text-xl font-bold tracking-wide text-white"
+          className="flex items-center gap-2 text-xl font-bold tracking-wider text-white hover:text-cyan-400 transition-colors"
         >
-          AK
+          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/10 border border-cyan-400/30 text-cyan-300 text-sm font-extrabold">
+            AK
+          </span>
+          <span className="text-base font-semibold tracking-wide">
+            ARAVINDHAKUMAR
+          </span>
         </Link>
 
         <nav className="hidden gap-8 md:flex">
@@ -30,34 +36,53 @@ export default function Navbar() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm text-gray-300 transition hover:text-cyan-400"
+              className="text-sm font-medium text-gray-300 transition hover:text-cyan-400"
             >
               {item.name}
             </Link>
           ))}
         </nav>
 
+        <div className="hidden md:flex items-center gap-4">
+          <Link
+            href="/#contact"
+            className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-300 transition hover:bg-cyan-400 hover:text-black"
+          >
+            Let&apos;s Talk
+          </Link>
+        </div>
+
         <button
           onClick={() => setOpen(!open)}
           className="text-white md:hidden"
+          aria-label="Toggle Navigation Menu"
         >
           {open ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-[#050816] md:hidden">
+        <div className="border-t border-white/10 bg-[#050816]/95 backdrop-blur-2xl md:hidden">
           <nav className="container-width flex flex-col py-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-white/5 py-4 text-gray-300"
+                className="border-b border-white/5 py-4 text-gray-300 hover:text-cyan-400 font-medium"
               >
                 {item.name}
               </Link>
             ))}
+            <div className="pt-6">
+              <Link
+                href="/#contact"
+                onClick={() => setOpen(false)}
+                className="block text-center rounded-full bg-cyan-400 py-3 text-sm font-semibold text-black"
+              >
+                Get in Touch
+              </Link>
+            </div>
           </nav>
         </div>
       )}

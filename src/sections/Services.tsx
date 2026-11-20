@@ -1,25 +1,34 @@
 import SectionTitle from "@/components/common/SectionTitle";
+import { FaWordpress, FaReact, FaShieldAlt, FaBolt } from "react-icons/fa";
 
 const services = [
   {
-    title: "WordPress Development",
+    title: "WordPress & WooCommerce Architecture",
     description:
-      "Custom WordPress websites, theme development, optimization, and scalable CMS solutions.",
+      "Custom WordPress themes, robust WooCommerce stores, headless CMS architectures, and scalable plugin customizations built for high reliability.",
+    icon: FaWordpress,
+    tag: "Core Specialty",
   },
   {
-    title: "Shopify Development",
+    title: "Next.js & React Applications",
     description:
-      "Modern Shopify storefronts, product management, theme customization, and integrations.",
+      "High-performance frontend and full-stack web applications built with Next.js (App Router), React, TypeScript, and modern API architectures.",
+    icon: FaReact,
+    tag: "Core Specialty",
   },
   {
-    title: "Next.js Applications",
+    title: "Performance Engineering & Core Web Vitals",
     description:
-      "High-performance React and Next.js applications with scalable frontend architecture.",
+      "Sub-second page speeds, Core Web Vitals optimization, asset minimization, Cloudflare edge caching, and mobile touch tuning for iOS WebKit.",
+    icon: FaBolt,
+    tag: "Speed & SEO",
   },
   {
-    title: "Performance Engineering",
+    title: "Security Hardening & Technical Forensics",
     description:
-      "Core Web Vitals optimization, technical SEO, speed improvements, and UX enhancements.",
+      "Incident response, malware removal, database sanitization, server-level .htaccess protections, and secure backend integration (including Django / Python APIs).",
+    icon: FaShieldAlt,
+    tag: "Security & DevOps",
   },
 ];
 
@@ -31,25 +40,38 @@ export default function Services() {
     >
       <div className="container-width">
         <SectionTitle
-          label="Services"
-          title="Professional web solutions for modern businesses."
+          label="Services & Solutions"
+          title="World-class web architecture tailored for businesses."
+          description="Combining the flexibility of WordPress, the speed of Next.js, and enterprise-grade performance engineering."
         />
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {services.map((service) => (
-            <div
-              key={service.title}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-cyan-400"
-            >
-              <h3 className="text-2xl font-semibold">
-                {service.title}
-              </h3>
+        <div className="grid gap-6 md:grid-cols-2 mt-12">
+          {services.map((service) => {
+            const Icon = service.icon;
+            return (
+              <div
+                key={service.title}
+                className="group rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-cyan-400/50 hover:bg-white/[0.07]"
+              >
+                <div className="flex items-center justify-between">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-cyan-400/10 text-cyan-400 group-hover:scale-110 transition-transform">
+                    <Icon size={24} />
+                  </div>
+                  <span className="rounded-full border border-cyan-400/20 bg-cyan-400/5 px-3 py-1 text-xs font-medium text-cyan-300">
+                    {service.tag}
+                  </span>
+                </div>
 
-              <p className="mt-5 leading-8 text-gray-400">
-                {service.description}
-              </p>
-            </div>
-          ))}
+                <h3 className="mt-6 text-2xl font-bold text-white">
+                  {service.title}
+                </h3>
+
+                <p className="mt-4 leading-8 text-gray-400">
+                  {service.description}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

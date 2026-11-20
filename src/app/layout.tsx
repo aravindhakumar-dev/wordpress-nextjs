@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Aravindhakumar G | WordPress, Shopify & Next.js Developer",
+    default: "Aravindhakumar G | WordPress & Next.js Technical Consultant",
     template: "%s | Aravindhakumar G",
   },
 
   description:
-    "Professional Full-Stack Web Developer specializing in WordPress, Shopify, WooCommerce, Next.js, React and Performance Optimization. Helping businesses build fast, scalable, SEO-friendly websites.",
+    "Senior Web Developer & Technical Consultant specializing in high-performance WordPress architectures, custom WooCommerce storefronts, Next.js applications, and enterprise security hardening.",
 
   applicationName: "Aravindhakumar Portfolio",
 

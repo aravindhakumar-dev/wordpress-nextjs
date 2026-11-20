@@ -24,17 +24,18 @@ export const metadata: Metadata = generateMetadata({
 });
 
 type Props = {
-  searchParams: {
+  searchParams: Promise<{
     page?: string;
-  };
+  }>;
 };
 
-const PROJECTS_PER_PAGE = 5;
+const PROJECTS_PER_PAGE = 6;
 
-export default function ProjectsPage({
+export default async function ProjectsPage({
   searchParams,
 }: Props) {
-  const currentPage = Number(searchParams.page ?? "1");
+  const resolvedSearchParams = await searchParams;
+  const currentPage = Number(resolvedSearchParams?.page ?? "1");
 
   const {
     items,
