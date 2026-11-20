@@ -29,7 +29,7 @@ type Props = {
   }>;
 };
 
-const PROJECTS_PER_PAGE = 6;
+const PROJECTS_PER_PAGE = 9;
 
 export default async function ProjectsPage({
   searchParams,

@@ -887,6 +887,154 @@ export const projects: Project[] = [
       ogImage: "/projects/malware-attack-chain.svg",
     },
   },
+
+  {
+    id: 7,
+    slug: "ai-agent-django-nextjs",
+    featured: true,
+    title: "Autonomous AI Agent & Full-Stack Django Integration",
+    category: "AI Engineering & Full-Stack Systems",
+    shortDescription:
+      "End-to-end autonomous AI agent architecture combining Next.js streaming frontend, Python/Django REST backend, tool-calling reasoning loops, and college project mentorship.",
+    description:
+      "Modern applications are shifting from static interfaces to autonomous, agentic systems. In this project showcase, we highlight the engineering of an AI Agent pipeline that couples a reactive Next.js UI with a robust Python/Django backend. The system executes multi-step reasoning, dynamic tool invocation, web scraping, and database persistence, while serving as a foundational blueprint for guiding developers and students building complex full-stack web architectures.",
+    thumbnail: "/projects/ai-agent-architecture.svg",
+    gallery: [
+      {
+        id: 1,
+        src: "/projects/ai-agent-architecture.svg",
+        alt: "Autonomous AI Agent & Django Architecture Diagram",
+      },
+    ],
+    liveUrl: "https://aravindhakumar.com/projects/ai-agent-django-nextjs",
+    technologies: [
+      "AI Agents",
+      "Python",
+      "Django REST Framework",
+      "Next.js (App Router)",
+      "React.js",
+      "PostgreSQL",
+      "Gemini / OpenAI API",
+      "Tailwind CSS",
+    ],
+    highlights: [
+      "Autonomous Multi-Step Reasoning Loop",
+      "Django REST API & Model Serializers",
+      "Next.js Real-time Token Streaming (SSE)",
+      "Dynamic Tool Calling & Web Scraping",
+      "Vector Memory & Query Orchestration",
+      "Academic & Developer Project Mentorship",
+    ],
+    metrics: [
+      {
+        id: 1,
+        label: "Autonomous Multi-Step Tool Execution",
+      },
+      {
+        id: 2,
+        label: "Sub-100ms Streaming UI Feedback",
+      },
+      {
+        id: 3,
+        label: "Production-Ready Django Architecture",
+      },
+    ],
+    overview:
+      "Businesses and academic teams increasingly require practical AI capabilities that go beyond simple chat prompts. This project demonstrates how to structure a production-grade full-stack system where an AI agent can inspect data, make decisions, invoke backend tools, and return structured results into a Next.js interface.",
+    challenge:
+      "Orchestrating agentic workflows involves tackling unreliability: uncontrolled token spend, hallucinations during multi-step reasoning, managing long-running tasks asynchronously without freezing UI responsiveness, and architecting a clean Django backend that separates relational data from agent state.",
+    solution:
+      "Constructed a modular 3-tier architecture: 1) Next.js App Router frontend delivering real-time streaming updates via Server-Sent Events; 2) Python-driven AI Agent orchestrator utilizing structured JSON schemas for deterministic tool execution; and 3) Robust Django REST framework backend managing authentication, database persistence, celery task queuing, and relational business logic.",
+    features: [
+      {
+        id: 1,
+        title: "Autonomous Decision Loop",
+        description:
+          "ReAct-style reasoning cycle allowing the agent to formulate hypotheses, select appropriate tools, inspect results, and iterate autonomously.",
+      },
+      {
+        id: 2,
+        title: "Django REST Architecture",
+        description:
+          "Clean MVC/MVT structure in Django with secure JWT authentication, relational PostgreSQL schemas, and modular API endpoints.",
+      },
+      {
+        id: 3,
+        title: "Real-Time Streaming UI",
+        description:
+          "Next.js frontend using Server-Sent Events (SSE) to render agent thinking steps, intermediate tool outputs, and final responses smoothly.",
+      },
+      {
+        id: 4,
+        title: "Tool Calling & Data Automation",
+        description:
+          "Equipped with custom Python tools for web data extraction, document parsing, and database queries guarded by strict parameter validation.",
+      },
+      {
+        id: 5,
+        title: "Guidance & Mentorship Framework",
+        description:
+          "Structured codebase designed to guide college students and junior developers in mastering modern Python, Django, and AI system design.",
+      },
+    ],
+    results: [
+      "Seamless integration between modern Next.js frontends and Python/Django backends",
+      "Deterministic, schema-validated tool calling with zero hallucinated API parameters",
+      "Proven framework utilized for guiding student capstones and commercial automation",
+      "Async execution preventing server timeouts during complex multi-step reasoning",
+      "Clean, modular codebase readily adaptable for custom enterprise agent workflows",
+    ],
+    takeaways: [
+      "Separate Agent Reasoning from State: Keep the LLM orchestration layer decoupled from your relational database models for maximum testability and speed.",
+      "Enforce Strict Schema Contracts: Use Pydantic or Django serializers to validate tool inputs before execution to eliminate runtime errors.",
+      "Stream Feedback Early: In agentic systems where multi-step tasks take several seconds, streaming intermediate status keeps users informed and engaged.",
+    ],
+    sections: [
+      {
+        title: "Architecture: Reactive Frontend Meets Python Intelligence",
+        subtitle: "3-Tier System Design",
+        content:
+          "The system marries the visual velocity of Next.js with the algorithmic power of Python and Django. Users submit goals through an interactive dashboard; the request triggers an asynchronous agent worker in Django, which plans actions, executes tools, and streams tokens back to the browser.",
+        codeSnippet: {
+          language: "python",
+          caption: "Django REST Framework Agent Tool Endpoint",
+          code: "# Django REST View for Autonomous Agent Dispatch\nfrom rest_framework.views import APIView\nfrom rest_framework.response import Response\nfrom rest_framework.permissions import IsAuthenticated\n\nclass AgentExecutionView(APIView):\n    permission_classes = [IsAuthenticated]\n\n    def post(self, request):\n        task_prompt = request.data.get('prompt')\n        agent_session = AgentOrchestrator(user=request.user)\n        execution_id = agent_session.dispatch_async(task_prompt)\n        return Response({'status': 'queued', 'execution_id': execution_id})",
+        },
+      },
+      {
+        title: "Tool Execution & Deterministic Validation",
+        subtitle: "Zero-Hallucination Guardrails",
+        content:
+          "Rather than trusting raw text output, all tool calls are parsed against strict parameter contracts before execution. If the agent generates an invalid argument, an immediate feedback reflection loop prompts the model to correct itself before touching production APIs or databases.",
+        codeSnippet: {
+          language: "python",
+          caption: "Agent Tool Invocation & Schema Guardrail",
+          code: "def execute_agent_tool(tool_name: str, arguments: dict):\n    tool = TOOL_REGISTRY.get(tool_name)\n    if not tool:\n        raise ValueError(f'Unknown tool: {tool_name}')\n    \n    validated_args = tool.schema.validate(arguments)\n    result = tool.run(**validated_args)\n    return {'tool': tool_name, 'result': result}",
+        },
+      },
+      {
+        title: "Academic & Developer Guidance Blueprint",
+        subtitle: "Mentoring Complex Web Systems",
+        content:
+          "Beyond commercial automation, this architecture serves as a hands-on learning blueprint. It has been used to mentor engineering students and junior developers in mastering Django ORM, REST API design, asynchronous processing, and responsible AI system architecture.",
+      },
+    ],
+    seo: {
+      title: "Autonomous AI Agent & Django Full-Stack Integration | Aravindhakumar G",
+      description:
+        "Full-stack case study demonstrating how to build autonomous AI agents using Next.js streaming interfaces, Python, and Django REST framework.",
+      keywords: [
+        "AI Agents",
+        "Next.js AI Integration",
+        "Django REST Framework",
+        "Python Full Stack",
+        "Agentic Workflows",
+        "Autonomous AI",
+      ],
+      canonical: "https://aravindhakumar.com/projects/ai-agent-django-nextjs",
+      ogImage: "/projects/ai-agent-architecture.svg",
+    },
+  },
 ];
 
 /**

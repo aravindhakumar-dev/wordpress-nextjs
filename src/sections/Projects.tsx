@@ -15,14 +15,14 @@ export default function Projects() {
         <SectionTitle
           label="Featured Work &amp; Case Studies"
           title="Real-world projects &amp; production case studies."
-          description="A showcase of high-performance WordPress platforms, custom Next.js applications, WooCommerce stores, and in-depth engineering forensic case studies."
+          description="A showcase of high-performance WordPress platforms, custom Next.js applications, autonomous AI agent architectures, and in-depth engineering forensic case studies."
         />
 
         {/* Featured Projects */}
         <div className="mt-16">
           <ProjectGrid
             projects={featuredProjects}
-            limit={6}
+            limit={8}
           />
         </div>
 

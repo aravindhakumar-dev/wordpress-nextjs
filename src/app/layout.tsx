@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Aravindhakumar G | WordPress & Next.js Technical Consultant",
+    default: "Aravindhakumar G | WordPress, Next.js & AI Agent Consultant",
     template: "%s | Aravindhakumar G",
   },
 
   description:
-    "Senior Web Developer & Technical Consultant specializing in high-performance WordPress architectures, custom WooCommerce storefronts, Next.js applications, and enterprise security hardening.",
+    "Senior Web Developer & AI Systems Consultant specializing in WordPress architectures, Next.js applications, autonomous AI agents, and Python/Django backend systems for global businesses.",
 
   applicationName: "Aravindhakumar Portfolio",
 
@@ -33,16 +33,16 @@ export const metadata: Metadata = {
   keywords: [
     "WordPress Developer",
     "WooCommerce Developer",
-    "Shopify Developer",
     "Next.js Developer",
+    "AI Agent Developer",
+    "Autonomous AI Agents",
+    "Django Developer",
+    "Python Web Development",
     "React Developer",
     "Full Stack Developer",
-    "Performance Optimization",
-    "Headless WordPress",
+    "Remote Web Consultant",
+    "Core Web Vitals",
     "Technical SEO",
-    "Frontend Developer",
-    "Web Performance Engineer",
-    "Freelance WordPress Developer",
   ],
 
   verification: {

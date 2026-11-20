@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#050814" />
+      <stop offset="100%" stop-color="#0D162B" />
+    </linearGradient>
+    <linearGradient id="aiGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8B5CF6" />
+      <stop offset="100%" stop-color="#06B6D4" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="16" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad)" />
+  <circle cx="950" cy="150" r="260" fill="#8B5CF6" opacity="0.08" filter="url(#glow)" />
+  <circle cx="200" cy="480" r="240" fill="#06B6D4" opacity="0.07" filter="url(#glow)" />
+
+  <!-- Badge & Header -->
+  <rect x="60" y="45" width="230" height="34" rx="17" fill="#8B5CF6" fill-opacity="0.12" stroke="#8B5CF6" stroke-opacity="0.3" />
+  <circle cx="80" cy="62" r="5" fill="#8B5CF6" />
+  <text x="96" y="67" fill="#C4B5FD" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" letter-spacing="1">AI AGENT ARCHITECTURE</text>
+
+  <text x="60" y="125" fill="#FFFFFF" font-family="system-ui, -apple-system, sans-serif" font-size="32" font-weight="800">Autonomous AI Agent &amp; Full-Stack Django Integration</text>
+  <text x="60" y="160" fill="#94A3B8" font-family="system-ui, -apple-system, sans-serif" font-size="16">Next.js Reactive Interface • Django REST API • Multi-Step Agentic Tool Execution</text>
+
+  <!-- 3 Architecture Stages -->
+  <g transform="translate(60, 195)">
+    <!-- Node 1: Client UI -->
+    <rect width="340" height="380" rx="20" fill="#0F172A" stroke="#06B6D4" stroke-opacity="0.4" stroke-width="1.5" />
+    <rect x="20" y="22" width="130" height="26" rx="13" fill="#06B6D4" fill-opacity="0.15" />
+    <text x="35" y="39" fill="#67E8F9" font-family="system-ui, sans-serif" font-size="11" font-weight="700">1. NEXT.JS CLIENT</text>
+
+    <text x="20" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Reactive Streaming UI</text>
+
+    <text x="20" y="115" fill="#06B6D4" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Server-Sent Events (SSE)</text>
+    <text x="32" y="133" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Real-time token and agent step streaming</text>
+
+    <text x="20" y="165" fill="#06B6D4" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Dynamic Tool Triggers</text>
+    <text x="32" y="183" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Interactive visual forms and payload previews</text>
+
+    <text x="20" y="215" fill="#06B6D4" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Optimistic UI Updates</text>
+    <text x="32" y="233" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Sub-100ms client latency feedback</text>
+
+    <text x="20" y="265" fill="#06B6D4" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Secure Session Auth</text>
+    <text x="32" y="283" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">JWT &amp; encrypted channel handshake</text>
+  </g>
+
+  <g transform="translate(430, 195)">
+    <!-- Node 2: Agent Orchestrator -->
+    <rect width="340" height="380" rx="20" fill="#0F172A" stroke="#8B5CF6" stroke-opacity="0.4" stroke-width="1.5" />
+    <rect x="20" y="22" width="140" height="26" rx="13" fill="#8B5CF6" fill-opacity="0.15" />
+    <text x="35" y="39" fill="#C4B5FD" font-family="system-ui, sans-serif" font-size="11" font-weight="700">2. AGENT RUNTIME</text>
+
+    <text x="20" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Reasoning &amp; Tool Loop</text>
+
+    <text x="20" y="115" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• ReAct Decision Cycle</text>
+    <text x="32" y="133" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Thought → Action → Observation Loop</text>
+
+    <text x="20" y="165" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Autonomous Tool Calling</text>
+    <text x="32" y="183" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Automated web scraping &amp; API dispatch</text>
+
+    <text x="20" y="215" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Guardrail Validation</text>
+    <text x="32" y="233" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Schema enforcement &amp; token budget caps</text>
+
+    <text x="20" y="265" fill="#8B5CF6" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Memory Persistence</text>
+    <text x="32" y="283" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Vector search &amp; conversation history buffer</text>
+  </g>
+
+  <g transform="translate(800, 195)">
+    <!-- Node 3: Django Backend -->
+    <rect width="340" height="380" rx="20" fill="#0F172A" stroke="#10B981" stroke-opacity="0.4" stroke-width="1.5" />
+    <rect x="20" y="22" width="150" height="26" rx="13" fill="#10B981" fill-opacity="0.15" />
+    <text x="35" y="39" fill="#6EE7B7" font-family="system-ui, sans-serif" font-size="11" font-weight="700">3. DJANGO BACKEND</text>
+
+    <text x="20" y="75" fill="#FFFFFF" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Python REST Architecture</text>
+
+    <text x="20" y="115" fill="#10B981" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Django REST Framework</text>
+    <text x="32" y="133" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Clean relational models &amp; serializing</text>
+
+    <text x="20" y="165" fill="#10B981" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Celery Background Queues</text>
+    <text x="32" y="183" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Async agent tasks and batch job processing</text>
+
+    <text x="20" y="215" fill="#10B981" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• PostgreSQL / Vector Storage</text>
+    <text x="32" y="233" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Embeddings, indexing and ACID compliance</text>
+
+    <text x="20" y="265" fill="#10B981" font-family="system-ui, sans-serif" font-size="13" font-weight="700">• Guided Architecture</text>
+    <text x="32" y="283" fill="#94A3B8" font-family="system-ui, sans-serif" font-size="12">Modular, maintainable &amp; production-ready</text>
+  </g>
+</svg>

@@ -5,7 +5,7 @@ export const experience = [
     company: "Independent Practice",
     duration: "2024 - Present",
     description:
-      "Architecting enterprise WordPress platforms, custom Next.js web applications, and WooCommerce storefronts with a focus on Core Web Vitals, security hardening, and performance engineering.",
+      "Architecting enterprise WordPress platforms, custom Next.js web applications, and autonomous AI agent workflows for international clients. Mentoring students and developers on Python and Django backend architecture.",
   },
 
   {
@@ -14,7 +14,7 @@ export const experience = [
     company: "Digital Agency Solutions",
     duration: "2023 - 2024",
     description:
-      "Engineered high-converting WooCommerce and headless WordPress solutions, custom theme development, and client web application integrations.",
+      "Engineered high-converting WooCommerce storefronts, headless WordPress solutions, custom theme development, and client web application integrations.",
   },
 
   {

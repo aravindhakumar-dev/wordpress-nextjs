@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { FaGithub, FaLinkedin, FaMapMarkerAlt, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaMapMarkerAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -10,12 +10,23 @@ export default function Footer() {
             ARAVINDHAKUMAR G
           </p>
           <p className="mt-1 text-xs text-gray-500">
-            WordPress &amp; Next.js Technical Consultant • Performance Engineering
+            WordPress • Next.js • Autonomous AI Agents • Django Systems
           </p>
         </div>
 
         {/* Social Media & Location */}
         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400">
+          <a
+            href="https://wa.me/919585367311?text=Hi%20Aravindhakumar,%20I%20would%20like%20to%20discuss%20a%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 transition hover:text-emerald-400"
+            aria-label="WhatsApp Contact"
+          >
+            <FaWhatsapp size={16} className="text-emerald-400" />
+            <span>WhatsApp</span>
+          </a>
+
           <a
             href="https://www.linkedin.com/in/aravindhakumar-g"
             target="_blank"

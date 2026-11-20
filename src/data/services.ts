@@ -1,33 +1,44 @@
 export const services = [
   {
     id: 1,
-    title: "WordPress Development",
+    title: "WordPress & WooCommerce Architecture",
     description:
-      "Custom WordPress websites, WooCommerce stores, theme customization and plugin integration.",
+      "Custom WordPress websites, WooCommerce stores, headless CMS integrations, and performance engineering.",
     icon: "wordpress",
   },
-
   {
     id: 2,
-    title: "Shopify Development",
+    title: "Next.js & React Applications",
     description:
-      "Responsive Shopify storefronts with performance optimization and custom sections.",
-    icon: "shopify",
-  },
-
-  {
-    id: 3,
-    title: "Next.js Applications",
-    description:
-      "Modern React and Next.js web applications with SEO and performance optimization.",
+      "Modern full-stack web applications built with Next.js App Router, TypeScript, and responsive UI systems.",
     icon: "nextjs",
   },
-
+  {
+    id: 3,
+    title: "Autonomous AI Agents & Automation",
+    description:
+      "Custom AI agent workflows, LLM integration, automated web scraping, and intelligent tool-calling pipelines.",
+    icon: "ai",
+  },
   {
     id: 4,
-    title: "Performance Engineering",
+    title: "Python & Django Backend Solutions",
     description:
-      "Core Web Vitals optimization, technical SEO, image optimization and caching.",
-    icon: "performance",
+      "Django REST Framework APIs, database architecture, and technical mentoring/guidance for college and enterprise projects.",
+    icon: "django",
+  },
+  {
+    id: 5,
+    title: "Overseas Client Collaboration",
+    description:
+      "Seamless async delivery across UK, US, and European timezones with direct milestone contracts and transparent communication.",
+    icon: "globe",
+  },
+  {
+    id: 6,
+    title: "Performance & Security Hardening",
+    description:
+      "Core Web Vitals optimization, forensic malware decontamination, database sanitization, and server lockdown.",
+    icon: "security",
   },
 ];

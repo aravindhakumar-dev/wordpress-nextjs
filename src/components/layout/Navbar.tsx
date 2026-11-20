@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -43,7 +44,17 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <div className="hidden md:flex items-center gap-4">
+        <div className="hidden md:flex items-center gap-3">
+          <a
+            href="https://wa.me/919585367311?text=Hi%20Aravindhakumar,%20I%20would%20like%20to%20discuss%20a%20web%20or%20AI%20project."
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-1.5 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-4 py-2 text-xs font-semibold text-emerald-300 transition hover:bg-emerald-500 hover:text-black"
+          >
+            <FaWhatsapp size={14} />
+            <span>WhatsApp</span>
+          </a>
+
           <Link
             href="/#contact"
             className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-5 py-2 text-xs font-semibold uppercase tracking-wider text-cyan-300 transition hover:bg-cyan-400 hover:text-black"
@@ -74,7 +85,18 @@ export default function Navbar() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-6">
+            <div className="pt-6 space-y-3">
+              <a
+                href="https://wa.me/919585367311?text=Hi%20Aravindhakumar,%20I%20would%20like%20to%20discuss%20a%20project."
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-full bg-emerald-500 py-3 text-sm font-semibold text-black"
+              >
+                <FaWhatsapp size={18} />
+                <span>Chat on WhatsApp</span>
+              </a>
+
               <Link
                 href="/#contact"
                 onClick={() => setOpen(false)}
