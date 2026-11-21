@@ -653,8 +653,8 @@ export default async function ProjectDetailsPage({
           <p className="mt-6 max-w-4xl leading-8 text-gray-400">
 
             Beyond the showcased projects, I have contributed to numerous
-            WordPress, WooCommerce, Shopify and custom web development
-            projects involving technical SEO, website optimization,
+            WordPress themes, custom plugins, WooCommerce, booking systems,
+            Next.js and React web application projects involving technical SEO, website optimization,
             performance engineering, hosting migration, maintenance,
             landing pages and enterprise business websites.
 

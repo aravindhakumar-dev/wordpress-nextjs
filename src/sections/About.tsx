@@ -24,8 +24,8 @@ export default function About() {
             </h3>
 
             <p className="mt-4 leading-7 text-gray-400 text-sm">
-              Deep expertise in custom WooCommerce storefronts, theme engineering, and reactive
-              Next.js App Router applications with sub-second page performance.
+              End-to-end expertise in custom WordPress themes, bespoke plugins, WooCommerce platforms,
+              complex booking systems, and high-performance Next.js/React web applications.
             </p>
           </div>
 

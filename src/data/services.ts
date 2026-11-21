@@ -1,16 +1,16 @@
 export const services = [
   {
     id: 1,
-    title: "WordPress & WooCommerce Architecture",
+    title: "Complete WordPress Engineering",
     description:
-      "Custom WordPress websites, WooCommerce stores, headless CMS integrations, and performance engineering.",
+      "End-to-end custom theme development, bespoke plugins, advanced WooCommerce e-commerce stores, and custom booking/reservation systems.",
     icon: "wordpress",
   },
   {
     id: 2,
-    title: "Next.js & React Applications",
+    title: "Next.js & React Web Applications",
     description:
-      "Modern full-stack web applications built with Next.js App Router, TypeScript, and responsive UI systems.",
+      "High-performance web applications, modern headless e-commerce storefronts, reactive interfaces, and scalable Next.js App Router solutions.",
     icon: "nextjs",
   },
   {

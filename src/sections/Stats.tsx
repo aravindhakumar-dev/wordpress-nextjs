@@ -4,16 +4,16 @@ const stats = [
     label: "Projects Completed",
   },
   {
-    number: "24+",
-    label: "WooCommerce Stores",
+    number: "28+",
+    label: "WooCommerce & E-Commerce",
   },
   {
-    number: "12+",
-    label: "Shopify Projects",
+    number: "18+",
+    label: "Booking & Custom Systems",
   },
   {
-    number: "6+",
-    label: "Next.js & AI Apps",
+    number: "14+",
+    label: "Next.js & AI Webapps",
   },
 ];
 

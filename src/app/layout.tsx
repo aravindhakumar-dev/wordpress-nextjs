@@ -82,7 +82,7 @@ export const metadata: Metadata = {
     title: "Aravindhakumar G | Full-Stack Web Developer",
 
     description:
-      "Professional portfolio showcasing WordPress, Shopify, Next.js and Performance Engineering projects.",
+      "Professional portfolio showcasing WordPress architectures, WooCommerce, Next.js and React web applications.",
 
     url: siteUrl,
 

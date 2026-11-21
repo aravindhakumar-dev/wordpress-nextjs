@@ -3,26 +3,26 @@ export const experience = [
     id: 1,
     role: "Senior Web Developer & Technical Consultant",
     company: "Independent Practice",
-    duration: "2024 - Present",
+    duration: "2025 - Present",
     description:
-      "Architecting enterprise WordPress platforms, custom Next.js web applications, and autonomous AI agent workflows for international clients. Mentoring students and developers on Python and Django backend architecture.",
+      "Delivering high-performance Next.js/React web applications, complete WordPress & WooCommerce platforms, custom booking systems, and autonomous AI integrations for private international clients across US, UK, and UAE.",
   },
 
   {
     id: 2,
-    role: "Full-Stack Web Developer",
-    company: "Digital Agency Solutions",
-    duration: "2023 - 2024",
+    role: "Development Lead & Senior Web Developer",
+    company: "The Creatives 360 (Dubai, UAE)",
+    duration: "2023 - 2025 · 2 Years",
     description:
-      "Engineered high-converting WooCommerce storefronts, headless WordPress solutions, custom theme development, and client web application integrations.",
+      "Served as Senior Web Developer (1 year) and Development Lead (1 year) at a premier Dubai digital marketing agency. Led architecture and technical delivery for high-scale WordPress, e-commerce, and web platforms across the UAE & Middle East. (Client projects protected under agency NDA norms).",
   },
 
   {
     id: 3,
     role: "UI/UX & Frontend Developer",
-    company: "Agency Experience",
+    company: "BLeap Digital Marketing",
     duration: "2021 - 2023",
     description:
-      "Built responsive, accessible user interfaces, optimized Core Web Vitals, and designed streamlined checkout and booking flows.",
+      "Engineered responsive, accessible web interfaces, custom WordPress themes and plugins, optimized Core Web Vitals, and built streamlined checkout and booking flows.",
   },
 ];

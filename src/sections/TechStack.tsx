@@ -2,8 +2,8 @@ import SectionTitle from "@/components/common/SectionTitle";
 
 const techCategories = [
   {
-    category: "CMS & eCommerce (Primary)",
-    items: ["WordPress", "WooCommerce", "Shopify", "PHP", "MySQL", "Headless CMS"],
+    category: "WordPress & E-Commerce Architecture (Primary)",
+    items: ["WordPress", "Custom Themes & Plugins", "WooCommerce", "Booking Systems", "PHP", "MySQL", "Headless CMS"],
   },
   {
     category: "Modern Frontend (Primary)",

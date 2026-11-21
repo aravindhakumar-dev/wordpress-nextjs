@@ -56,9 +56,8 @@ export default function Hero() {
 
           {/* Description */}
           <p className="mt-5 sm:mt-7 max-w-3xl text-sm sm:text-base md:text-lg leading-7 sm:leading-8 text-gray-400">
-            Architecting high-performance WordPress platforms, reactive Next.js applications,
-            and autonomous AI agent workflows for international businesses, startups, and agencies.
-            Specialized in Core Web Vitals, enterprise security, and Python/Django backend systems.
+            Specializing in complete WordPress engineering (bespoke themes, custom plugins, booking engines &amp; WooCommerce),
+            high-performance Next.js and React web applications, and autonomous AI systems for international clients across the US, UK, and UAE.
           </p>
 
           {/* Overseas Client Perks Banner */}

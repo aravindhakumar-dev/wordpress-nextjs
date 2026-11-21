@@ -67,8 +67,8 @@ const getDescription = (technology: string) => {
   if (tech.includes("woocommerce"))
     return "eCommerce Platform";
 
-  if (tech.includes("shopify"))
-    return "Online Store Platform";
+  if (tech.includes("booking"))
+    return "Booking & Reservation Engine";
 
   if (tech.includes("next"))
     return "React Framework";

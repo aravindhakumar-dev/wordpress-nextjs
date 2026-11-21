@@ -33,7 +33,7 @@ export default function Contact() {
               <FaGlobe size={14} />
               Overseas Client Ready:
             </span>
-            <span>UK (GMT), Europe (CET), USA (EST/PST) &amp; Global Timezones.</span>
+            <span>USA (EST/PST), UK (GMT), UAE (GST), Europe (CET) &amp; Global Timezones.</span>
             <span>•</span>
             <span>Direct Milestone Contracts (Zero Platform Escrow Fees).</span>
             <span>•</span>

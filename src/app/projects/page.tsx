@@ -12,12 +12,12 @@ import { generateMetadata } from "@/lib/seo";
 export const metadata: Metadata = generateMetadata({
   title: "Projects | Aravindhakumar G",
   description:
-    "Explore WordPress, WooCommerce, Shopify and Next.js projects developed for real-world clients across multiple industries.",
+    "Explore WordPress, WooCommerce, Next.js and React web applications developed for real-world clients across multiple industries.",
   keywords: [
     "WordPress Portfolio",
     "WooCommerce Projects",
     "Next.js Portfolio",
-    "Shopify Developer",
+    "React Developer",
     "Web Development Portfolio",
   ],
   url: "https://aravindhakumar.com/projects",
@@ -90,9 +90,9 @@ export default async function ProjectsPage({
           </h2>
 
           <p className="mt-4 sm:mt-6 text-sm sm:text-base leading-7 sm:leading-8 text-gray-400">
-            Additional experience includes WordPress development,
-            WooCommerce customization, Shopify storefronts,
-            Next.js applications, autonomous AI agents, performance optimization,
+            Additional experience includes complete WordPress themes and plugins,
+            WooCommerce platforms, custom booking systems,
+            Next.js &amp; React web applications, autonomous AI agents, performance optimization,
             technical SEO improvements, hosting migration,
             website maintenance and custom business solutions
             across multiple industries.
