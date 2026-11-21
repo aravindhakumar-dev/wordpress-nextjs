@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@next/third-parties": "^16.2.6",
-    "@tailwindcss/oxide-win32-x64-msvc": "^4.3.5",
     "clsx": "^2.1.1",
     "framer-motion": "^12.38.0",
     "lucide-react": "^1.16.0",
