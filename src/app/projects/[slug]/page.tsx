@@ -138,7 +138,7 @@ export default async function ProjectDetailsPage({
 
         {/* Title */}
 
-        <h1 className="mt-6 max-w-4xl text-5xl font-bold leading-tight text-white">
+        <h1 className="mt-4 sm:mt-6 max-w-4xl text-2xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight text-white break-words">
 
           {project.title}
 
@@ -146,7 +146,7 @@ export default async function ProjectDetailsPage({
 
         {/* Description */}
 
-        <p className="mt-8 max-w-4xl text-lg leading-9 text-gray-400">
+        <p className="mt-4 sm:mt-6 max-w-4xl text-sm sm:text-base md:text-lg leading-7 sm:leading-9 text-gray-300">
 
           {project.description}
 
@@ -154,27 +154,33 @@ export default async function ProjectDetailsPage({
 
         {/* CTA */}
 
-        <div className="mt-10 flex flex-wrap gap-4">
+        <div className="mt-8 sm:mt-10 flex flex-wrap gap-3 sm:gap-4">
 
-          <a
-            href={project.liveUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button>
+          {project.liveUrl && !project.liveUrl.includes("aravindhakumar.com") ? (
+            <a
+              href={project.liveUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto"
+            >
+              <Button className="w-full sm:w-auto">
+                <Globe size={18} />
+                View Live Website
+              </Button>
+            </a>
+          ) : (
+            <Link href="/#contact" className="w-full sm:w-auto">
+              <Button className="w-full sm:w-auto">
+                Discuss Similar Architecture
+              </Button>
+            </Link>
+          )}
 
-              View Live Website
+          <Link href="/projects" className="w-full sm:w-auto">
 
-              <Globe size={18} />
+            <Button variant="secondary" className="w-full sm:w-auto">
 
-            </Button>
-          </a>
-
-          <Link href="/projects">
-
-            <Button variant="secondary">
-
-              Back to Projects
+              ← Back to All Projects
 
             </Button>
 

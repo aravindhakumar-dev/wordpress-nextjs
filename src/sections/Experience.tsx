@@ -1,53 +1,43 @@
 import SectionTitle from "@/components/common/SectionTitle";
-
-const experiences = [
-  {
-    role: "Senior Web Developer",
-    company: "Digital Marketing Agency – Dubai",
-    duration: "2024 — 2026",
-  },
-  {
-    role: "Freelance Full-Stack Developer",
-    company: "aravindhakumar.com",
-    duration: "2023 — 2024",
-  },
-  {
-    role: "UI/UX Developer",
-    company: "BLeap Digital Marketing",
-    duration: "2021 — 2023",
-  },
-];
+import { experience } from "@/data/experience";
 
 export default function Experience() {
   return (
     <section className="section-spacing">
       <div className="container-width">
         <SectionTitle
-          label="Experience"
-          title="Professional journey & experience."
+          label="Professional Experience"
+          title="Career journey &amp; technical leadership."
+          description="A track record of engineering scalable WordPress architectures, custom Next.js applications, and mentoring engineering teams."
         />
 
-        <div className="space-y-6">
-          {experiences.map((item) => (
+        <div className="space-y-4 sm:space-y-6">
+          {experience.map((item) => (
             <div
-              key={item.role}
-              className="rounded-3xl border border-white/10 bg-white/5 p-8"
+              key={item.id}
+              className="rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-8 transition hover:border-cyan-400/30"
             >
-              <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+              <div className="flex flex-col gap-2 sm:gap-4 md:flex-row md:items-center md:justify-between">
                 <div>
-                  <h3 className="text-2xl font-semibold">
+                  <h3 className="text-xl sm:text-2xl font-bold text-white">
                     {item.role}
                   </h3>
 
-                  <p className="mt-2 text-gray-400">
+                  <p className="mt-1 text-sm font-medium text-cyan-400">
                     {item.company}
                   </p>
                 </div>
 
-                <span className="text-sm text-cyan-400">
+                <span className="self-start md:self-auto rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-gray-300">
                   {item.duration}
                 </span>
               </div>
+
+              {item.description && (
+                <p className="mt-4 text-xs sm:text-sm leading-6 text-gray-400">
+                  {item.description}
+                </p>
+              )}
             </div>
           ))}
         </div>

@@ -65,33 +65,33 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(!open)}
-          className="text-white md:hidden"
+          className="text-white md:hidden p-2.5 -mr-2 min-h-[44px] min-w-[44px] flex items-center justify-center rounded-xl hover:bg-white/5 active:scale-95 transition"
           aria-label="Toggle Navigation Menu"
         >
-          {open ? <X size={28} /> : <Menu size={28} />}
+          {open ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
 
       {open && (
-        <div className="border-t border-white/10 bg-[#050816]/95 backdrop-blur-2xl md:hidden">
-          <nav className="container-width flex flex-col py-6">
+        <div className="border-t border-white/10 bg-[#050816]/98 backdrop-blur-2xl md:hidden max-h-[calc(100dvh-5rem)] overflow-y-auto shadow-2xl">
+          <nav className="container-width flex flex-col py-4 pb-8">
             {navItems.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="border-b border-white/5 py-4 text-gray-300 hover:text-cyan-400 font-medium"
+                className="border-b border-white/5 py-3.5 text-sm font-medium text-gray-200 active:text-cyan-400 transition min-h-[44px] flex items-center"
               >
                 {item.name}
               </Link>
             ))}
-            <div className="pt-6 space-y-3">
+            <div className="pt-5 space-y-3">
               <a
                 href="https://wa.me/919585367311?text=Hi%20Aravindhakumar,%20I%20would%20like%20to%20discuss%20a%20project."
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
-                className="flex items-center justify-center gap-2 rounded-full bg-emerald-500 py-3 text-sm font-semibold text-black"
+                className="flex items-center justify-center gap-2 rounded-2xl bg-emerald-500 py-3 text-sm font-semibold text-black active:scale-95 transition min-h-[44px]"
               >
                 <FaWhatsapp size={18} />
                 <span>Chat on WhatsApp</span>
@@ -100,7 +100,7 @@ export default function Navbar() {
               <Link
                 href="/#contact"
                 onClick={() => setOpen(false)}
-                className="block text-center rounded-full bg-cyan-400 py-3 text-sm font-semibold text-black"
+                className="block text-center rounded-2xl bg-cyan-400 py-3 text-sm font-semibold text-black active:scale-95 transition min-h-[44px]"
               >
                 Get in Touch
               </Link>

@@ -37,27 +37,27 @@ export default function Projects() {
         </div>
 
         {/* Additional Experience */}
-        <div className="mt-20 rounded-3xl border border-white/10 bg-white/5 p-8 lg:p-12">
+        <div className="mt-14 sm:mt-20 rounded-3xl border border-white/10 bg-white/5 p-6 sm:p-10 lg:p-12">
           <div className="max-w-4xl">
 
-            <span className="text-sm uppercase tracking-[0.3em] text-cyan-400">
+            <span className="text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.3em] text-cyan-400 font-semibold">
               Additional Experience
             </span>
 
-            <h3 className="mt-4 text-3xl font-bold text-white">
+            <h3 className="mt-3 sm:mt-4 text-xl sm:text-2xl md:text-3xl font-bold text-white">
               Additional client and agency development experience.
             </h3>
 
-            <p className="mt-6 leading-8 text-gray-400">
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base leading-7 sm:leading-8 text-gray-400">
               Additional experience includes WordPress development,
               WooCommerce customization, Shopify storefronts,
-              Next.js applications, performance optimization,
+              Next.js applications, autonomous AI agents, performance optimization,
               technical SEO improvements, hosting migration,
               website maintenance and enterprise web solutions
               across multiple industries.
             </p>
 
-            <p className="mt-4 text-sm leading-7 text-gray-500">
+            <p className="mt-4 text-xs sm:text-sm leading-6 sm:leading-7 text-gray-500">
               Some client projects cannot be publicly showcased due to
               company policies and confidentiality agreements.
             </p>

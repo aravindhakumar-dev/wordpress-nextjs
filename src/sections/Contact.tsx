@@ -18,7 +18,7 @@ export default function Contact() {
       className="section-spacing"
     >
       <div className="container-width">
-        <div className="rounded-[40px] border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-8 md:p-16">
+        <div className="rounded-3xl sm:rounded-[40px] border border-white/10 bg-gradient-to-b from-white/[0.08] to-white/[0.02] p-5 sm:p-10 md:p-14">
           <div className="flex flex-wrap items-center justify-between gap-4">
             <SectionTitle
               label="International Inquiries &amp; Collaboration"

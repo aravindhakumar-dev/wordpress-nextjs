@@ -29,11 +29,11 @@ export default function Button({
       rel={rel ?? (isExternal ? "noopener noreferrer" : undefined)}
       {...props}
       className={clsx(
-        "inline-flex items-center rounded-2xl px-6 py-3 text-sm font-semibold transition-all duration-300",
+        "inline-flex items-center justify-center gap-2 rounded-2xl px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold transition-all duration-300 min-h-[44px] touch-manipulation text-center",
         variant === "primary" &&
-          "bg-cyan-400 text-black hover:scale-105",
+          "bg-cyan-400 text-black hover:scale-[1.02] active:scale-95 shadow-lg shadow-cyan-400/20",
         variant === "secondary" &&
-          "border border-white/10 bg-white/5 text-white hover:border-cyan-400",
+          "border border-white/10 bg-white/5 text-white hover:border-cyan-400 hover:bg-white/10 active:scale-95",
         props.className
       )}
     >

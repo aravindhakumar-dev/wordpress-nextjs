@@ -44,7 +44,7 @@ export default function ProjectFeatures({
 
           <div
             key={feature.id}
-            className="rounded-3xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/10"
+            className="rounded-3xl border border-white/10 bg-white/5 p-5 sm:p-8 transition-all duration-300 hover:border-cyan-400/30 hover:bg-white/10"
           >
 
             <div className="flex items-start gap-4">

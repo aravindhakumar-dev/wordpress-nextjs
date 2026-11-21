@@ -17,33 +17,33 @@ export default function ProjectCTA({
   buttonHref,
 }: Props) {
   return (
-    <section className="overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/10 via-white/5 to-white/5 p-10 lg:p-16">
+    <section className="overflow-hidden rounded-3xl border border-cyan-400/20 bg-gradient-to-br from-cyan-400/10 via-white/5 to-white/5 p-6 sm:p-10 lg:p-16">
 
       <div className="mx-auto max-w-4xl text-center">
 
-        <span className="text-sm uppercase tracking-[0.3em] text-cyan-400">
-          Let's Build Together
+        <span className="text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.3em] text-cyan-400 font-semibold">
+          Let&apos;s Build Together
         </span>
 
-        <h2 className="mt-4 text-4xl font-bold leading-tight text-white lg:text-5xl">
+        <h2 className="mt-3 sm:mt-4 text-2xl sm:text-4xl lg:text-5xl font-bold leading-tight text-white">
           {title}
         </h2>
 
-        <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-300">
+        <p className="mx-auto mt-4 sm:mt-6 max-w-2xl text-sm sm:text-base md:text-lg leading-7 sm:leading-8 text-gray-300">
           {description}
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-8 sm:mt-10 flex flex-wrap items-center justify-center gap-3 sm:gap-4">
 
-          <Link href={buttonHref}>
-            <Button>
+          <Link href={buttonHref} className="w-full sm:w-auto">
+            <Button className="w-full sm:w-auto">
               {buttonText}
               <ArrowRight size={18} />
             </Button>
           </Link>
 
-          <Link href="/projects">
-            <Button variant="secondary">
+          <Link href="/projects" className="w-full sm:w-auto">
+            <Button variant="secondary" className="w-full sm:w-auto">
               View More Projects
             </Button>
           </Link>

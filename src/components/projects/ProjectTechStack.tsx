@@ -97,6 +97,15 @@ const getDescription = (technology: string) => {
   if (tech.includes("cloudflare"))
     return "CDN & Security";
 
+  if (tech.includes("ai") || tech.includes("agent"))
+    return "Artificial Intelligence & Agents";
+
+  if (tech.includes("django"))
+    return "Python Web Framework";
+
+  if (tech.includes("python"))
+    return "Backend & AI Language";
+
   return "Technology Used";
 };
 

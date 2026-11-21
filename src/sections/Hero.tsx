@@ -40,49 +40,49 @@ export default function Hero() {
           </div>
 
           {/* Subtitle */}
-          <p className="mb-3 text-sm uppercase tracking-[0.3em] text-cyan-400 font-semibold">
+          <p className="mb-3 text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.3em] text-cyan-400 font-semibold">
             Senior Web Developer &amp; AI Systems Consultant
           </p>
 
           {/* Main Heading */}
-          <h1 className="text-5xl font-extrabold leading-tight tracking-tight md:text-7xl">
+          <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold leading-[1.1] tracking-tight text-white break-words">
             ARAVINDHAKUMAR G
           </h1>
 
           {/* Tech Stack */}
-          <h2 className="mt-6 text-2xl leading-relaxed text-gray-200 md:text-3xl font-semibold">
+          <h2 className="mt-4 sm:mt-6 text-lg sm:text-2xl md:text-3xl leading-relaxed text-gray-200 font-semibold">
             WordPress • Next.js • Autonomous AI Agents • Django Systems
           </h2>
 
           {/* Description */}
-          <p className="mt-7 max-w-3xl text-lg leading-8 text-gray-400">
+          <p className="mt-5 sm:mt-7 max-w-3xl text-sm sm:text-base md:text-lg leading-7 sm:leading-8 text-gray-400">
             Architecting high-performance WordPress platforms, reactive Next.js applications,
             and autonomous AI agent workflows for international businesses, startups, and agencies.
             Specialized in Core Web Vitals, enterprise security, and Python/Django backend systems.
           </p>
 
           {/* Overseas Client Perks Banner */}
-          <div className="mt-6 flex flex-wrap gap-4 text-xs text-gray-400">
-            <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5">
-              <FaClock className="text-cyan-400" /> Async Slack, Notion &amp; Git Workflows
+          <div className="mt-6 flex flex-wrap gap-2.5 sm:gap-4 text-xs text-gray-400">
+            <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 sm:px-3 py-1.5">
+              <FaClock className="text-cyan-400 shrink-0" /> Async Slack, Notion &amp; Git Workflows
             </span>
-            <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5">
+            <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 sm:px-3 py-1.5">
               Direct Contracts • Zero Platform Escrow Markups
             </span>
-            <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-3 py-1.5">
+            <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 sm:px-3 py-1.5">
               College &amp; Enterprise Project Architecture Mentorship
             </span>
           </div>
 
           {/* Social & Contact Links */}
-          <div className="mt-8 flex flex-wrap items-center gap-6 text-sm text-gray-400">
+          <div className="mt-7 sm:mt-8 flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-gray-400">
             <a
               href="https://www.linkedin.com/in/aravindhakumar-g"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 transition hover:text-cyan-400"
+              className="flex items-center gap-2 transition hover:text-cyan-400 py-1"
             >
-              <FaLinkedin size={18} />
+              <FaLinkedin size={16} />
               LinkedIn
             </a>
 
@@ -90,9 +90,9 @@ export default function Hero() {
               href="https://github.com/aravindhakumar-dev"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 transition hover:text-cyan-400"
+              className="flex items-center gap-2 transition hover:text-cyan-400 py-1"
             >
-              <FaGithub size={18} />
+              <FaGithub size={16} />
               GitHub
             </a>
 
@@ -100,24 +100,24 @@ export default function Hero() {
               href="https://maps.app.goo.gl/gP5iaF4LRzRD37Gm9"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 transition hover:text-cyan-400"
+              className="flex items-center gap-2 transition hover:text-cyan-400 py-1"
             >
-              <FaMapMarkerAlt size={18} />
+              <FaMapMarkerAlt size={16} />
               Tamil Nadu, India
             </a>
 
             <a
               href="mailto:aravindhakumar.dev@gmail.com"
-              className="flex items-center gap-2 transition hover:text-cyan-400"
+              className="flex items-center gap-2 transition hover:text-cyan-400 py-1 break-all"
             >
-              <FaEnvelope size={18} />
+              <FaEnvelope size={16} />
               aravindhakumar.dev@gmail.com
             </a>
           </div>
 
           {/* CTA Buttons */}
-          <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Button href="#projects">
+          <div className="mt-8 sm:mt-10 flex flex-wrap items-center gap-3 sm:gap-4">
+            <Button href="#projects" className="w-full sm:w-auto">
               View Featured Work
             </Button>
 
@@ -125,7 +125,7 @@ export default function Hero() {
               href="https://wa.me/919585367311?text=Hi%20Aravindhakumar,%20I%20would%20like%20to%20discuss%20a%20web%20or%20AI%20project."
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-full border border-emerald-500/40 bg-emerald-500/10 px-6 py-3 text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500 hover:text-black"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 rounded-2xl border border-emerald-500/40 bg-emerald-500/10 px-5 sm:px-6 py-2.5 sm:py-3 text-xs sm:text-sm font-semibold text-emerald-300 transition hover:bg-emerald-500 hover:text-black min-h-[44px] active:scale-95"
             >
               <FaWhatsapp size={18} />
               <span>WhatsApp Chat</span>
@@ -134,6 +134,7 @@ export default function Hero() {
             <Button
               href="#contact"
               variant="secondary"
+              className="w-full sm:w-auto"
             >
               Contact &amp; Bookings
             </Button>
@@ -141,6 +142,7 @@ export default function Hero() {
             <Button
               href="/projects"
               variant="secondary"
+              className="w-full sm:w-auto"
             >
               Case Studies
             </Button>
