@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
+import AkLogo from "@/components/common/AkLogo";
 
 const navItems = [
   { name: "Home", href: "/" },
@@ -22,14 +23,10 @@ export default function Navbar() {
       <div className="container-width flex h-20 items-center justify-between">
         <Link
           href="/"
-          className="flex items-center gap-2 text-xl font-bold tracking-wider text-white hover:text-cyan-400 transition-colors"
+          className="group flex items-center transition-transform active:scale-95"
+          aria-label="Aravindhakumar Portfolio Home"
         >
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-cyan-400/10 border border-cyan-400/30 text-cyan-300 text-sm font-extrabold">
-            AK
-          </span>
-          <span className="text-base font-semibold tracking-wide">
-            ARAVINDHAKUMAR
-          </span>
+          <AkLogo size="md" showName={true} />
         </Link>
 
         <nav className="hidden gap-8 md:flex">

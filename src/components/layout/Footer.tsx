@@ -1,17 +1,23 @@
 import Link from "next/link";
 import { FaGithub, FaLinkedin, FaMapMarkerAlt, FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import AkLogo from "@/components/common/AkLogo";
 
 export default function Footer() {
   return (
     <footer className="border-t border-white/10 py-12">
       <div className="container-width flex flex-col items-center justify-between gap-6 md:flex-row">
-        <div>
-          <p className="text-sm font-semibold text-white">
-            ARAVINDHAKUMAR G
-          </p>
-          <p className="mt-1 text-xs text-gray-500">
-            WordPress • Next.js • Autonomous AI Agents • Django Systems
-          </p>
+        <div className="flex items-center gap-4">
+          <Link href="/" className="group" aria-label="Aravindhakumar Home">
+            <AkLogo size="sm" showName={false} />
+          </Link>
+          <div>
+            <p className="text-sm font-semibold text-white tracking-wide">
+              ARAVINDHAKUMAR G
+            </p>
+            <p className="mt-0.5 text-xs text-gray-500">
+              WordPress • Next.js • Autonomous AI Agents • Django Systems
+            </p>
+          </div>
         </div>
 
         {/* Social Media & Location */}
