@@ -974,9 +974,14 @@ id: 1,
       },
       {
         title: "Academic & Developer Guidance Blueprint",
-        subtitle: "Mentoring Complex Web Systems",
+        subtitle: "Mentoring Complex Web Systems & Deep Learning",
         content:
-          "Beyond commercial automation, this architecture serves as a hands-on learning blueprint. It has been used to mentor engineering students and junior developers in mastering Django ORM, REST API design, asynchronous processing, and responsible AI system architecture.",
+          "Beyond commercial automation, this architecture builds directly upon foundational academic engineering — including the Multi-Modal Medical Imaging Integration Web Application (Django + TensorFlow + U-Net Segmentation) developed at Madras Institute of Technology (Anna University). This project serves as an active blueprint for mentoring engineering students and developers in mastering Django ORM, REST API design, deep learning model deployment, and asynchronous system architecture. Explore the open-source repository at https://github.com/aravindhakumar-dev/medicalimaging.",
+        codeSnippet: {
+          language: "python",
+          caption: "Multi-Modal Medical Image Fusion & Inference (Django + TensorFlow)",
+          code: "# Multi-Modal Image Fusion Pipeline (Django + TensorFlow)\nimport tensorflow as tf\n\ndef fuse_modalities(features_list):\n    \"\"\"\n    Concatenates feature maps from MRI, CT, PET & Ultrasound scans\n    and passes through dense representation for clinical diagnosis.\n    \"\"\"\n    fused_features = tf.concat(features_list, axis=-1)\n    fusion_output = tf.keras.layers.Dense(128, activation='relu')(fused_features)\n    return fusion_output",
+        },
       },
     ],
     seo: {
