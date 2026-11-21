@@ -64,7 +64,7 @@ export default function Hero() {
           {/* Overseas Client Perks Banner */}
           <div className="mt-6 flex flex-wrap gap-2.5 sm:gap-4 text-xs text-gray-400">
             <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 sm:px-3 py-1.5">
-              <FaClock className="text-cyan-400 shrink-0" /> Async Slack, Notion &amp; Git Workflows
+              <FaClock className="text-cyan-400 shrink-0" /> Async Slack &amp; Git Workflows
             </span>
             <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 sm:px-3 py-1.5">
               Direct Contracts • Zero Platform Escrow Markups
