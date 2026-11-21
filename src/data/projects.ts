@@ -21,22 +21,12 @@ export const projects: Project[] = [
     thumbnail: "/projects/varnatari-homepage.png",
 
     gallery: [
-      {
-        id: 1,
+        {
+id: 1,
         src: "/projects/varnatari-homepage.png",
         alt: "Varnatari Homepage",
-      },
-      {
-        id: 2,
-        src: "/projects/varnatari-products.png",
-        alt: "Products Page",
-      },
-      {
-        id: 3,
-        src: "/projects/varnatari-product-details.png",
-        alt: "Product Details",
-      },
-    ],
+        },
+      ],
 
     liveUrl: "https://varnatari.com",
 
@@ -164,22 +154,12 @@ export const projects: Project[] = [
     thumbnail: "/projects/montresor-store.png",
 
     gallery: [
-      {
-        id: 1,
+        {
+id: 1,
         src: "/projects/montresor-store.png",
         alt: "Montresor Homepage",
-      },
-      {
-        id: 2,
-        src: "/projects/montresor-category.png",
-        alt: "Jewelry Collection",
-      },
-      {
-        id: 3,
-        src: "/projects/montresor-product.png",
-        alt: "Product Details",
-      },
-    ],
+        },
+      ],
 
     liveUrl: "https://montresor.co.in",
 
@@ -307,22 +287,12 @@ export const projects: Project[] = [
     thumbnail: "/projects/britepro-website.png",
 
     gallery: [
-      {
-        id: 1,
+        {
+id: 1,
         src: "/projects/britepro-website.png",
         alt: "BritePro AV Homepage",
-      },
-      {
-        id: 2,
-        src: "/projects/britepro-services.png",
-        alt: "Services Page",
-      },
-      {
-        id: 3,
-        src: "/projects/britepro-products.png",
-        alt: "Products Showcase",
-      },
-    ],
+        },
+      ],
 
     liveUrl: "https://briteproav.com",
 
@@ -452,22 +422,12 @@ export const projects: Project[] = [
     thumbnail: "/projects/felix-polyclinic.png",
 
     gallery: [
-      {
-        id: 1,
+        {
+id: 1,
         src: "/projects/felix-polyclinic.png",
         alt: "Felix Polyclinic Homepage",
-      },
-      {
-        id: 2,
-        src: "/projects/felix-doctors.png",
-        alt: "Doctors Listing",
-      },
-      {
-        id: 3,
-        src: "/projects/felix-services.png",
-        alt: "Healthcare Services",
-      },
-    ],
+        },
+      ],
 
     liveUrl: "https://felixpolyclinic.com",
 
