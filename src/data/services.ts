@@ -15,27 +15,34 @@ export const services = [
   },
   {
     id: 3,
+    title: "Cross-Platform Flutter Mobile Apps",
+    description:
+      "Production-ready iOS and Android mobile app development with Flutter & Dart, responsive UI/UX, REST API/Firebase integration, state management, and App Store/Play Store deployment.",
+    icon: "flutter",
+  },
+  {
+    id: 4,
     title: "Autonomous AI Agents & Automation",
     description:
       "Custom AI agent workflows, LLM integration, automated web scraping, and intelligent tool-calling pipelines.",
     icon: "ai",
   },
   {
-    id: 4,
+    id: 5,
     title: "Python & Django Backend Solutions",
     description:
       "Django REST Framework APIs, database architecture, and technical mentoring/guidance for college and enterprise projects.",
     icon: "django",
   },
   {
-    id: 5,
+    id: 6,
     title: "Overseas Client Collaboration",
     description:
       "Seamless async delivery across UK, US, and European timezones with direct milestone contracts and transparent communication.",
     icon: "globe",
   },
   {
-    id: 6,
+    id: 7,
     title: "Performance & Security Hardening",
     description:
       "Core Web Vitals optimization, forensic malware decontamination, database sanitization, and server lockdown.",

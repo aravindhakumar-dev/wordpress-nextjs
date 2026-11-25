@@ -9,23 +9,23 @@ export default function About() {
       <div className="container-width">
         <SectionTitle
           label="About Me &amp; Philosophy"
-          title="Building scalable web platforms, autonomous AI agents &amp; robust backends."
-          description="A multi-disciplinary web engineer specializing in enterprise WordPress, Next.js applications, autonomous AI agent pipelines, and Python/Django architecture guidance for international clients and developers."
+          title="Building scalable web platforms, Flutter mobile apps &amp; autonomous AI agents."
+          description="A multi-disciplinary software engineer specializing in enterprise WordPress, Next.js web applications, cross-platform Flutter iOS &amp; Android apps, autonomous AI agent pipelines, and Python/Django architecture guidance for international clients and startups."
         />
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4 mt-12">
           {/* Card 1 */}
           <div className="rounded-3xl border border-white/10 bg-white/5 p-8 transition hover:border-cyan-400/40">
             <span className="text-xs uppercase tracking-widest text-cyan-400 font-semibold">
-              01 • CMS &amp; Web Apps
+              01 • Web &amp; Mobile Platforms
             </span>
             <h3 className="mt-3 text-xl font-bold text-white">
-              WordPress &amp; Next.js
+              WordPress, Next.js &amp; Flutter
             </h3>
 
             <p className="mt-4 leading-7 text-gray-400 text-sm">
-              End-to-end expertise in custom WordPress themes, bespoke plugins, WooCommerce platforms,
-              complex booking systems, and high-performance Next.js/React web applications.
+              End-to-end expertise in custom WordPress themes, WooCommerce platforms,
+              high-performance Next.js webapps, and cross-platform Flutter mobile applications for iOS and Android.
             </p>
           </div>
 

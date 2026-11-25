@@ -8,12 +8,12 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
 
   title: {
-    default: "Aravindhakumar G | WordPress, Next.js & AI Agent Consultant",
+    default: "Aravindhakumar G | WordPress, Next.js, Flutter Mobile Apps & AI Consultant",
     template: "%s | Aravindhakumar G",
   },
 
   description:
-    "Senior Web Developer & AI Systems Consultant specializing in WordPress architectures, Next.js applications, autonomous AI agents, and Python/Django backend systems for global businesses.",
+    "Senior Freelance Full-Stack & Mobile App Developer specializing in WordPress architectures, Next.js applications, cross-platform Flutter (iOS & Android) mobile app development, and autonomous AI systems for global businesses.",
 
   applicationName: "Aravindhakumar Portfolio",
 
@@ -31,14 +31,22 @@ export const metadata: Metadata = {
   category: "Technology",
 
   keywords: [
+    "Flutter Developer",
+    "Freelance Flutter Developer",
+    "Flutter Mobile App Development",
+    "Cross-Platform App Developer",
+    "iOS and Android App Developer",
+    "Hire Flutter Developer",
+    "Dart Developer",
+    "Mobile App Freelancer",
     "WordPress Developer",
     "WooCommerce Developer",
     "Next.js Developer",
+    "React Developer",
     "AI Agent Developer",
     "Autonomous AI Agents",
     "Django Developer",
     "Python Web Development",
-    "React Developer",
     "Full Stack Developer",
     "Remote Web Consultant",
     "Core Web Vitals",
@@ -79,10 +87,10 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Aravindhakumar G | Full-Stack Web Developer",
+    title: "Aravindhakumar G | Full-Stack Web & Flutter Mobile App Developer",
 
     description:
-      "Professional portfolio showcasing WordPress architectures, WooCommerce, Next.js and React web applications.",
+      "Professional portfolio showcasing WordPress architectures, WooCommerce, Next.js webapps, and cross-platform Flutter iOS/Android mobile apps.",
 
     url: siteUrl,
 
@@ -105,10 +113,10 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Aravindhakumar G",
+    title: "Aravindhakumar G | Web & Mobile App Developer",
 
     description:
-      "Professional Full-Stack Web Developer Portfolio",
+      "WordPress architectures, Next.js applications, cross-platform Flutter mobile apps, and autonomous AI agents.",
 
     images: ["/og-image.jpg"],
   },
@@ -122,6 +130,72 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Aravindhakumar G",
+  url: siteUrl,
+  jobTitle: "Senior Full-Stack & Mobile App Developer",
+  sameAs: [
+    "https://github.com/aravindhakumar-dev",
+    "https://www.linkedin.com/in/aravindhakumar-g",
+  ],
+  knowsAbout: [
+    "Flutter Mobile App Development",
+    "Dart",
+    "Cross-Platform iOS & Android Apps",
+    "WordPress Development",
+    "WooCommerce",
+    "Next.js",
+    "React",
+    "Autonomous AI Agents",
+    "Python",
+    "Django REST Framework",
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Freelance Development Services",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Cross-Platform Flutter Mobile App Development",
+          description:
+            "High-performance native iOS and Android mobile applications built with Flutter and Dart, responsive UI/UX, REST API/Firebase integration, and App Store/Play Store deployment.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Complete WordPress & WooCommerce Engineering",
+          description:
+            "Custom themes, bespoke plugins, high-converting WooCommerce storefronts, and booking systems.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Next.js & React Web Applications",
+          description:
+            "Scalable full-stack web applications, headless commerce, SSR/SSG, and reactive UI architecture.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Autonomous AI Agents & Intelligent Automation",
+          description:
+            "Custom AI agent workflows, LLM tool-calling pipelines, automated data extraction, and intelligent systems.",
+        },
+      },
+    ],
+  },
+};
+
 export default function RootLayout({
   children,
 }: {
@@ -130,6 +204,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
         <GoogleTagManager gtmId="GTM-5M9Q7KGN" />
       </body>

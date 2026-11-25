@@ -6,8 +6,12 @@ const techCategories = [
     items: ["WordPress", "Custom Themes & Plugins", "WooCommerce", "Booking Systems", "PHP", "MySQL", "Headless CMS"],
   },
   {
-    category: "Modern Frontend (Primary)",
+    category: "Modern Frontend & Web (Primary)",
     items: ["Next.js (App Router)", "React.js", "TypeScript", "Tailwind CSS", "JavaScript (ES6+)", "Framer Motion"],
+  },
+  {
+    category: "Mobile App Development (Flutter)",
+    items: ["Flutter", "Dart", "Cross-Platform iOS & Android", "Bloc & Riverpod", "REST API & Firebase", "Material 3 & Cupertino", "App Store & Play Store CI/CD"],
   },
   {
     category: "AI Agents & Automation (Featured)",
@@ -19,7 +23,7 @@ const techCategories = [
   },
   {
     category: "Performance, Security & DevOps",
-    items: ["Core Web Vitals", "Server Hardening", "Cloudflare CDN", "Git & GitHub", "Vercel", "DigitalOcean"],
+    items: ["Core Web Vitals", "Server Hardening", "Cloudflare CDN", "Git & GitHub", "Vercel & Netlify", "DigitalOcean"],
   },
 ];
 

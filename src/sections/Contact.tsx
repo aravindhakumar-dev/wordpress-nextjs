@@ -22,8 +22,8 @@ export default function Contact() {
           <div className="flex flex-wrap items-center justify-between gap-4">
             <SectionTitle
               label="International Inquiries &amp; Collaboration"
-              title="Let’s build your next web or AI project."
-              description="Open for WordPress engineering, custom Next.js applications, autonomous AI agent workflows, and Python/Django project guidance for international clients and agencies."
+              title="Let’s build your next web, mobile app, or AI project."
+              description="Open for custom WordPress engineering, reactive Next.js applications, cross-platform Flutter iOS &amp; Android mobile apps, and autonomous AI systems for global clients and startups."
             />
           </div>
 

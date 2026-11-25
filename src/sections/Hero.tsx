@@ -41,7 +41,7 @@ export default function Hero() {
 
           {/* Subtitle */}
           <p className="mb-3 text-xs sm:text-sm uppercase tracking-[0.25em] sm:tracking-[0.3em] text-cyan-400 font-semibold">
-            Senior Web Developer &amp; AI Systems Consultant
+            Senior Web &amp; Mobile App Developer • AI Systems Consultant
           </p>
 
           {/* Main Heading */}
@@ -51,19 +51,22 @@ export default function Hero() {
 
           {/* Tech Stack */}
           <h2 className="mt-4 sm:mt-6 text-lg sm:text-2xl md:text-3xl leading-relaxed text-gray-200 font-semibold">
-            WordPress • Next.js • Autonomous AI Agents • Django Systems
+            WordPress • Next.js • Flutter Mobile Apps • AI Agents &amp; Django Systems
           </h2>
 
           {/* Description */}
           <p className="mt-5 sm:mt-7 max-w-3xl text-sm sm:text-base md:text-lg leading-7 sm:leading-8 text-gray-400">
             Specializing in complete WordPress engineering (bespoke themes, custom plugins, booking engines &amp; WooCommerce),
-            high-performance Next.js and React web applications, and autonomous AI systems for international clients across the US, UK, and UAE.
+            high-performance Next.js web applications, cross-platform Flutter iOS &amp; Android mobile apps, and autonomous AI systems for international clients across the US, UK, and UAE.
           </p>
 
           {/* Overseas Client Perks Banner */}
           <div className="mt-6 flex flex-wrap gap-2.5 sm:gap-4 text-xs text-gray-400">
             <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 sm:px-3 py-1.5">
               <FaClock className="text-cyan-400 shrink-0" /> Async Slack &amp; Git Workflows
+            </span>
+            <span className="flex items-center gap-1.5 rounded-lg border border-cyan-400/20 bg-cyan-400/10 px-2.5 sm:px-3 py-1.5 text-cyan-300 font-medium">
+              Flutter iOS &amp; Android Apps
             </span>
             <span className="flex items-center gap-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 sm:px-3 py-1.5">
               Direct Contracts • Zero Platform Escrow Markups

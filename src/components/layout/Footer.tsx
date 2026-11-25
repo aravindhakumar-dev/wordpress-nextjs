@@ -15,7 +15,7 @@ export default function Footer() {
               ARAVINDHAKUMAR G
             </p>
             <p className="mt-0.5 text-xs text-gray-500">
-              WordPress • Next.js • Autonomous AI Agents • Django Systems
+              WordPress • Next.js • Flutter Mobile Apps • Autonomous AI Agents • Django Systems
             </p>
           </div>
         </div>
